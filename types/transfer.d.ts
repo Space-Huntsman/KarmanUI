@@ -1,4 +1,4 @@
-import { CreateKarman, VNode } from 'vue'
+import { CreateElement, VNode } from 'vue'
 import { KarmanUIComponent } from './component'
 
 export type TransferPanelPosition = 'left' | 'right'
@@ -27,7 +27,7 @@ export interface TransferRenderContent {
    * @param h The render function
    * @param option The option data object
    */
-  (h: CreateKarman, option: TransferData): VNode
+  (h: CreateElement, option: TransferData): VNode
 }
 
 /** Transfer Component */

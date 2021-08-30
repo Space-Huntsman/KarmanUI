@@ -89,6 +89,7 @@ import {KuiDescriptions} from './descriptions'
 import {KuiDescriptionsItem} from './descriptions-item'
 import {KuiResult} from './result'
 
+
 export interface InstallationOptions {
   locale: any,
   i18n: any,
@@ -376,3 +377,4 @@ export class DescripitionsItem extends KuiDescriptionsItem {}
 
 /** Result Component */
 export class Result extends KuiResult {}
+

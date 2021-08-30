@@ -1,4 +1,4 @@
-import { VNode, CreateKarman } from 'vue';
+import { VNode, CreateElement } from 'vue';
 import { KarmanUIComponent } from './component'
 
 /** Trigger mode of expanding current item */
@@ -66,7 +66,7 @@ export declare class KuiCascaderPanel<V = any, D = CascaderOption> extends Karma
   border: boolean
 
   /** Render function of custom label content */
-  renderLabel: (h: CreateKarman, context: { node: CascaderNode<V, D>; data: D }) => VNode
+  renderLabel: (h: CreateElement, context: { node: CascaderNode<V, D>; data: D }) => VNode
 
   $slots: CascaderPanelSlots
 }

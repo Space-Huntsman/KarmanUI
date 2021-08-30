@@ -3,7 +3,7 @@ import Vue, { VNodeDirective, PluginObject } from 'vue'
 /** Options used in Loading service */
 export interface LoadingServiceOptions {
   /** The DOM node Loading needs to cover. Accepts a DOM object or a string. If it's a string, it will be passed to `document.querySelector` to get the corresponding DOM node */
-  target?: HTMLKarman | string
+  target?: HTMLElement | string
 
   /** Whether to make the mask append to the body karman */
   body?: boolean

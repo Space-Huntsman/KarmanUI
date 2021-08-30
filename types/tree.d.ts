@@ -1,4 +1,4 @@
-import { CreateKarman, VNode } from 'vue';
+import { CreateElement, VNode } from 'vue';
 import { KarmanUIComponent } from './component';
 
 export interface TreeData {
@@ -69,7 +69,7 @@ export declare class KuiTree<K, D extends TreeData> extends KarmanUIComponent {
    *
    * @param h The render function
    */
-  renderContent: (h: CreateKarman, context: { node: TreeNode<K, D>; data: D; store: TreeStore<K, D> }) => VNode;
+  renderContent: (h: CreateElement, context: { node: TreeNode<K, D>; data: D; store: TreeStore<K, D> }) => VNode;
 
   /** Whether current node is highlighted */
   highlightCurrent: boolean;

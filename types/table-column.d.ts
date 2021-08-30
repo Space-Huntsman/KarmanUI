@@ -1,4 +1,4 @@
-import { CreateKarman, VNode } from 'vue'
+import { CreateElement, VNode } from 'vue'
 import { KarmanUIComponent, KarmanUIHorizontalAlignment } from './component'
 import { PopoverPlacement } from './popover'
 
@@ -62,7 +62,7 @@ export declare class KuiTableColumn extends KarmanUIComponent {
   fixed: boolean | TableColumnFixedType
 
   /** Render function for table header of this column */
-  renderHeader: (h: CreateKarman, data: RenderHeaderData) => VNode | string
+  renderHeader: (h: CreateElement, data: RenderHeaderData) => VNode | string
 
   /** Whether column can be sorted */
   sortable: boolean | 'custom'
