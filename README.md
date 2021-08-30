@@ -1,69 +1,8 @@
-<p align="center">
-  <img src="https://cdn.rawgit.com/spaceHuntsman/karman/dev/karman_logo.svg">
-</p>
 
-<p align="center">
-  <a href="https://travis-ci.org/spaceHuntsman/karman">
-    <img src="https://travis-ci.org/spaceHuntsman/karman.svg?branch=master">
-  </a>
-  <a href="https://coveralls.io/github/spaceHuntsman/karman?branch=master">
-    <img src="https://coveralls.io/repos/github/spaceHuntsman/karman/badge.svg?branch=master">
-  </a>
-  <a href="https://cdnjs.com/libraries/karman-ui">
-    <img src="https://img.shields.io/cdnjs/v/karman-ui.svg">
-  </a>
-  <a href="https://www.npmjs.org/package/karman-ui">
-    <img src="https://img.shields.io/npm/v/karman-ui.svg">
-  </a>
-  <a href="https://npmcharts.com/compare/karman-ui?minimal=true">
-    <img src="http://img.shields.io/npm/dm/karman-ui.svg">
-  </a>
-  <br>
-  <a href="http://img.badgesize.io/https://unpkg.com/karman-ui/lib/index.js?compression=gzip&label=gzip%20size:%20JS">
-    <img src="http://img.badgesize.io/https://unpkg.com/karman-ui/lib/index.js?compression=gzip&label=gzip%20size:%20JS">
-  </a>
-  <a href="http://img.badgesize.io/https://unpkg.com/karman-ui/lib/theme-default/index.css?compression=gzip&label=gzip%20size:%20CSS">
-    <img src="http://img.badgesize.io/https://unpkg.com/karman-ui/lib/theme-default/index.css?compression=gzip&label=gzip%20size:%20CSS">
-  </a>
-  <a href="#backers">
-    <img src="https://opencollective.com/karman/backers/badge.svg">
-  </a>
-  <a href="#sponsors">
-    <img src="https://opencollective.com/karman/sponsors/badge.svg">
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
-  </a>
-</p>
 
 > A Vue.js 2.0 UI Toolkit for Web.
 
 Karman will stay with Vue 2.x 
-
-For Vue 3.0, we recommend using [Karman Plus](https://github.com/karman-plus/karman-plus) from the same team
-
-## Links
-- Homepage and documentation
-  - [International users](http://karman.eleme.io/#/en-US)
-  - [Chinese users](http://karman-cn.eleme.io/#/zh-CN)
-  - [Spanish users](http://karman.eleme.io/#/es)
-  - [French users](http://karman.eleme.io/#/fr-FR)
-- [awesome-karman](https://github.com/karmanUI/awesome-karman)
-- [FAQ](./FAQ.md)
-- [Vue.js 3.0 migration](https://github.com/karman-plus/karman-plus)
-- [Customize theme](http://karman.eleme.io/#/en-US/component/custom-theme)
-- [Preview and generate theme online](https://karmanUI.github.io/theme-default-preview)
-- [Karman for React](https://github.com/space-huntsman/karman-react)
-- [Karman for Angular](https://github.com/spaceHuntsman/karman-angular)
-- [Atom helper](https://github.com/spaceHuntsman/karman-helper)
-- [Visual Studio Code helper](https://github.com/spaceHuntsman/vscode-karman-helper)
-- Starter kit
-  - [karman-starter](https://github.com/karmanUI/karman-starter)
-  - [karman-in-laravkui-starter](https://github.com/karmanUI/karman-in-laravkui-starter)
-- [Design resources](https://github.com/karmanUI/Resources)
-- Gitter
-  - [International users](https://gitter.im/karman-en/Lobby)
-  - [Chinese users](https://gitter.im/spaceHuntsman/karman)
 
 ## Install
 ```shell
