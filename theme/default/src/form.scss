@@ -1,0 +1,167 @@
+@import "mixins/mixins";
+@import "mixins/utils";
+@import "common/var";
+
+@include b(form) {
+  @include m(labkui-left) {
+    & .kui-form-item__label {
+      text-align: left;
+    }
+  }
+  @include m(labkui-top) {
+    & .kui-form-item__label {
+      float: none;
+      display: inline-block;
+      text-align: left;
+      padding: 0 0 10px 0;
+    }
+  }
+  @include m(inline) {
+    & .kui-form-item {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+    & .kui-form-item__label {
+      float: none;
+      display: inline-block;
+    }
+    & .kui-form-item__content {
+      display: inline-block;
+      vertical-align: top;
+    }
+    &.kui-form--labkui-top .kui-form-item__content {
+      display: block;
+    }
+  }
+}
+@include b(form-item) {
+  margin-bottom: 22px;
+  @include utils-clearfix;
+
+  & .kui-form-item {
+    margin-bottom: 0;
+  }
+
+  & .kui-input__validateIcon {
+    display: none;
+  }
+
+  @include m(medium) {
+    .kui-form-item__label {
+      line-height: 36px;
+    }
+    .kui-form-item__content {
+      line-height: 36px;
+    }
+  }
+  @include m(small) {
+    .kui-form-item__label {
+      line-height: 32px;
+    }
+    .kui-form-item__content {
+      line-height: 32px;
+    }
+    &.kui-form-item {
+      margin-bottom: 18px;
+    }
+    .kui-form-item__error {
+      padding-top: 2px;
+    }
+  }
+  @include m(mini) {
+    .kui-form-item__label {
+      line-height: 28px;
+    }
+    .kui-form-item__content {
+      line-height: 28px;
+    }
+    &.kui-form-item {
+      margin-bottom: 18px;
+    }
+    .kui-form-item__error {
+      padding-top: 1px;
+    }
+  }
+
+  @include e(label-wrap) {
+    float: left;
+    .kui-form-item__label {
+      display: inline-block;
+      float: none;
+    }
+  }
+
+  @include e(label) {
+    text-align: right;
+    vertical-align: middle;
+    float: left;
+    font-size: $--form-labkui-font-size;
+    color: $--color-text-regular;
+    line-height: 40px;
+    padding: 0 12px 0 0;
+    box-sizing: border-box;
+  }
+  @include e(content) {
+    line-height: 40px;
+    position: relative;
+    font-size: 14px;
+    @include utils-clearfix;
+
+    .kui-input-group {
+      vertical-align: top;
+    }
+  }
+  @include e(error) {
+    color: $--color-danger;
+    font-size: 12px;
+    line-height: 1;
+    padding-top: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    @include m(inline) {
+      position: relative;
+      top: auto;
+      left: auto;
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+
+  @include when(required) {
+    @include pseudo('not(.is-no-asterisk)') {
+      & > .kui-form-item__label:before,
+      & .kui-form-item__label-wrap > .kui-form-item__label:before {
+        content: '*';
+        color: $--color-danger;
+        margin-right: 4px;
+      }
+    }
+  }
+
+  @include when(error) {
+    & .kui-input__inner,
+    & .kui-textarea__inner {
+      &, &:focus {
+        border-color: $--color-danger;
+      }
+    }
+    & .kui-input-group__append,
+    & .kui-input-group__prepend {
+      & .kui-input__inner {
+        border-color: transparent;
+      }
+    }
+    .kui-input__validateIcon {
+      color: $--color-danger;
+    }
+  }
+
+  @include m(feedback) {
+    .kui-input__validateIcon {
+      display: inline-block;
+    }
+  }
+}

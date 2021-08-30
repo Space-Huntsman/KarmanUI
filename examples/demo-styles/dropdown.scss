@@ -1,0 +1,37 @@
+.demo-block {
+  .kui-dropdown {
+    vertical-align: top;
+
+    & + .kui-dropdown {
+      margin-left: 15px;
+    }
+  }
+  .kui-dropdown-link {
+    cursor: pointer;
+    color: #409eff;
+  }
+  .kui-icon-arrow-down {
+    font-size: 12px;
+  }
+}
+
+.block-col-2 {
+  margin: -24px;
+
+  .kui-col {
+    padding: 30px 0;
+    text-align: center;
+    border-right: 1px solid #eff2f6;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
+
+.demo-dropdown .demonstration {
+  display: block;
+  color: #8492a6;
+  font-size: 14px;
+  margin-bottom: 20px;
+}

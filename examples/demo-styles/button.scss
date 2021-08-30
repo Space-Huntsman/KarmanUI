@@ -1,0 +1,21 @@
+.demo-block.demo-button {
+  .kui-row {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .kui-button + .kui-button {
+    margin-left: 10px;
+  }
+  .kui-button-group {
+    .kui-button + .kui-button {
+      margin-left: 0;
+    }
+
+    & + .kui-button-group {
+      margin-left: 10px;
+    }
+  }
+}

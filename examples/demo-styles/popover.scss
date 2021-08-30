@@ -1,0 +1,11 @@
+.demo-block.demo-popover {
+  .kui-popover + .kui-popover {
+    margin-left: 10px;
+  }
+  .kui-input {
+    width: 360px;
+  }
+  .kui-button {
+    margin-left: 10px;
+  }
+}
