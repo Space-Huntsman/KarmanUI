@@ -70,7 +70,7 @@ Use `before-upload` hook to limit the upload file format and size.
     overflow: hidden;
   }
   .avatar-uploader .kui-upload:hover {
-    border-color: #409EFF;
+    border-color: #7A00A3;
   }
   .avatar-uploader-icon {
     font-size: 28px;

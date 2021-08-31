@@ -1,3 +1,4 @@
+#因为需要只用make 命令 window系统需要安装 gun MinGW，安装成功后需配置MinGW/bin 目录为环境变量
 .PHONY: dist test
 default: help
 

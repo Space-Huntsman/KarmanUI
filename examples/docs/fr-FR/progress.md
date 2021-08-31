@@ -61,12 +61,12 @@ Vous pouvez utiliser l'attribut `color` pour définir la couleur de la barre de 
     data() {
       return {
         percentage: 20,
-        customColor: '#409eff',
+        customColor: '#7A00A3',
         customColors: [
           {color: '#f56c6c', percentage: 20},
           {color: '#e6a23c', percentage: 40},
           {color: '#5cb87a', percentage: 60},
-          {color: '#1989fa', percentage: 80},
+          {color: '#7A00A3', percentage: 80},
           {color: '#6f7ad3', percentage: 100}
         ]
       };
@@ -135,7 +135,7 @@ Vous pouvez également spécifier l'attribut `type` de `dashboard` pour utiliser
           {color: '#f56c6c', percentage: 20},
           {color: '#e6a23c', percentage: 40},
           {color: '#5cb87a', percentage: 60},
-          {color: '#1989fa', percentage: 80},
+          {color: '#7A00A3', percentage: 80},
           {color: '#6f7ad3', percentage: 100}
         ]
       };

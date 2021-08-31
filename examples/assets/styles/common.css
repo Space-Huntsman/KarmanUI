@@ -14,7 +14,7 @@ html, body {
 
 #app {
   height: 100%;
-  
+
   &.is-component {
     overflow-y: hidden;
 
@@ -31,7 +31,7 @@ html, body {
       left: 0;
       top: 0;
       z-index: 1500;
-      
+
       .container {
         padding: 0;
       }
@@ -40,7 +40,7 @@ html, body {
 }
 
 a {
-  color: #409EFF;
+  color:#7A00A3;
   text-decoration: none;
 }
 
@@ -123,9 +123,9 @@ button, input, select, textarea {
 
   .tip {
     padding: 8px 16px;
-    background-color: #ECF8FF;
+    background-color: #f8e1ff;
     border-radius: 4px;
-    border-left: #50bfff 5px solid;
+    border-left: #7A00A3 5px solid;
     margin: 20px 0;
 
     code {

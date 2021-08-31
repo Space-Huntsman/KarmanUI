@@ -37,7 +37,7 @@ Display date.
 </kui-calendar>
 <style>
   .is-selected {
-    color: #1989FA;
+    color: #7A00A3;
   }
 </style>
 ```

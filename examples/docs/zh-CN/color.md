@@ -20,7 +20,7 @@
     'borderExtraLight': '$--border-color-extra-light'
   };
   const original = {
-    primary: '#409EFF',
+    primary: '#7A00A3',
     success: '#67C23A',
     warning: '#E6A23C',
     danger: '#F56C6C',
@@ -101,7 +101,7 @@ Karman 主要品牌颜色是鲜艳、友好的蓝色。
 <kui-row :gutter="12">
   <kui-col :span="10" :xs="{span: 12}">
     <div class="demo-color-box" :style="{ background: primary }">Brand Color
-      <div class="value">#409EFF</div>
+      <div class="value">#7A00A3</div>
       <div class="bg-color-sub" :style="{ background: tintColor(primary, 0.9) }">
         <div
           class="bg-blue-sub-item"

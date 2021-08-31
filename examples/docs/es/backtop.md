@@ -33,7 +33,7 @@ Desplácese hacia abajo para ver el botón en el lado inferior derecho.
         box-shadow: 0 0 6px rgba(0,0,0, .12);
         text-align: center;
         line-height: 40px;
-        color: #1989fa;
+        color: #7A00A3;
       }"
     >
       UP

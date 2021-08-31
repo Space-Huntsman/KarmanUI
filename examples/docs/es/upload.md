@@ -66,7 +66,7 @@ Utilice el _hook_ `before-upload` para limitar el formato de archivo y su tamañ
     overflow: hidden;
   }
   .avatar-uploader .kui-upload:hover {
-    border-color: #409EFF;
+    border-color: #7A00A3;
   }
   .avatar-uploader-icon {
     font-size: 28px;

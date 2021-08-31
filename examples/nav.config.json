@@ -5,14 +5,6 @@
       "path": "/changelog"
     },
     {
-      "name": "Karman React",
-      "href": "https://space-huntsman.github.io/karman-react/"
-    },
-    {
-      "name": "Karman Angular",
-      "href": "https://karman-angular.faas.ele.me/"
-    },
-    {
       "name": "开发指南",
       "children": [
         {
@@ -317,14 +309,6 @@
     {
       "name": "Changelog",
       "path": "/changelog"
-    },
-    {
-      "name": "Karman React",
-      "href": "https://space-huntsman.github.io/karman-react/"
-    },
-    {
-      "name": "Karman Angular",
-      "href": "https://karman-angular.faas.ele.me/"
     },
     {
       "name": "Development",
@@ -633,14 +617,6 @@
       "path": "/changelog"
     },
     {
-      "name": "Karman React",
-      "href": "https://space-huntsman.github.io/karman-react/"
-    },
-    {
-      "name": "Karman Angular",
-      "href": "https://karman-angular.faas.ele.me/"
-    },
-    {
       "name": "Development",
       "children": [
         {
@@ -945,14 +921,6 @@
     {
       "name": "Changelog",
       "path": "/changelog"
-    },
-    {
-      "name": "Karman pour React",
-      "href": "https://space-huntsman.github.io/karman-react/"
-    },
-    {
-      "name": "Karman pour Angular",
-      "href": "https://karman-angular.faas.ele.me/"
     },
     {
       "name": "Développement",

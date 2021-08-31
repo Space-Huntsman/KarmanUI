@@ -127,7 +127,7 @@ Switch es utilizado para realizar cambios entre dos estados opuestos.
 | inactive-text       | texto mostrado en el estado `off`        | string                    | —                 | —           |
 | active-value        | cambia su valor cuando se encuentra en el estado `on` | boolean / string / number | —                 | true        |
 | inactive-value      | cambia su valor cuando se encuentra en el estado `off` | boolean / string / number | —                 | false       |
-| active-color        | color de fondo cuando se encuentra en el estado `on` | string                    | —                 | #409EFF     |
+| active-color        | color de fondo cuando se encuentra en el estado `on` | string                    | —                 | #7A00A3     |
 | inactive-color      | color de fondo cuando se encuentra en el estado `off` | string                    | —                 | #C0CCDA     |
 | name                | nombre de entrada del componente Switch  | string                    | —                 | —           |
 | validate-event      | si se debe lanzar la validación de formulario | boolean              | -                 | true        |

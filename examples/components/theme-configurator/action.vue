@@ -82,13 +82,13 @@
       }
       .reset {
         background: #E6F1FC;
-        color: #1989FA;
+        color: #7A00A3;
         border-color: #A2CFFC;
       }
       .download {
-        background: #1989FA;
+        background: #7A00A3;
         color: #FFF;
-        border-color: #1989FA
+        border-color: #7A00A3
       }
     }
   }

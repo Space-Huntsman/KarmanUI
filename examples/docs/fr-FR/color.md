@@ -20,7 +20,7 @@
     'borderExtraLight': '$--border-color-extra-light'
   };
   const original = {
-    primary: '#409EFF',
+    primary: '#7A00A3',
     success: '#67C23A',
     warning: '#E6A23C',
     danger: '#F56C6C',
@@ -100,7 +100,7 @@ La couleur principale d'Karman est un bleu clair et agréable.
 <kui-row :gutter="12">
   <kui-col :span="10" :xs="{span: 12}">
     <div class="demo-color-box" :style="{ background: primary }">Couleur principale
-      <div class="value">#409EFF</div>
+      <div class="value">#7A00A3</div>
       <div class="bg-color-sub" :style="{ background: tintColor(primary, 0.9) }">
         <div
           class="bg-blue-sub-item"

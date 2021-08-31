@@ -125,7 +125,7 @@
       height: 53px;
       line-height: 52px;
       font-size: 14px;
-      color: #409EFF;
+      color: #7A00A3;
       text-align: center;
       border: 0;
       border-top: 1px solid #eaeefb;
@@ -143,7 +143,7 @@
 
       &:hover {
         color: #fff;
-        background: #409EFF;
+        background: #7A00A3;
       }
     }
     &:hover {
@@ -354,7 +354,7 @@
 </template>
 <script>
   import throttle from 'throttle-debounce/throttle';
-  
+
   export default {
     created() {
       this.throttledHandleScroll = throttle(10, true, index => {

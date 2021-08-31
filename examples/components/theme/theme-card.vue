@@ -353,7 +353,7 @@ export default {
       return DEFAULT_THEME_CONFIG;
     },
     mainColor() {
-      return this.theme.global['$--color-primary'] || '#1989FA';
+      return this.theme.global['$--color-primary'] || '#7A00A3';
     },
     mainColor50() {
       return tintColor(this.mainColor, 0.5);

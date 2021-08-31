@@ -201,7 +201,7 @@ Se soporta la selección de un rango de valores.
           37: '37°C',
           50: {
             style: {
-              color: '#1989FA'
+              color: '#7A00A3'
             },
             label: this.$createElement('strong', '50%')
           }

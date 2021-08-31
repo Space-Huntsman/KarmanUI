@@ -4,7 +4,7 @@
   }
 
   #v3-banner {
-    background-color: #409EFF;
+    background-color: #7A00A3;
     min-height: 30px;
     padding: 5px 60px;
     z-index: 19;
@@ -133,18 +133,18 @@
           color: #888;
 
           &:hover {
-            color: #409EFF;
+            color: #7A00A3;
           }
           &.active {
              font-weight: bold;
-             color: #409EFF;
+             color: #7A00A3;
            }
         }
       }
 
       a {
         text-decoration: none;
-        color: #1989FA;
+        color: #7A00A3;
         opacity: 0.5;
         display: block;
         padding: 0 22px;
@@ -162,7 +162,7 @@
           left: calc(50% - 15px);
           width: 30px;
           height: 2px;
-          background: #409EFF;
+          background: #7A00A3;
         }
       }
     }
@@ -197,7 +197,7 @@
 
     .is-active {
       span, i {
-        color: #409EFF;
+        color: #7A00A3;
       }
       i {
         transform: rotateZ(180deg) translateY(3px);
@@ -206,7 +206,7 @@
 
     &:hover {
       span, i {
-        color: #409EFF;
+        color: #7A00A3;
       }
     }
   }
@@ -452,16 +452,16 @@
       }
     },
     mounted() {
-      const testInnerImg = new Image();
-      testInnerImg.onload = () => {
-        this.$isEle = true;
-        ga('send', 'event', 'DocView', 'Ali', 'Inner');
-      };
-      testInnerImg.onerror = (err) => {
-        ga('send', 'event', 'DocView', 'Ali', 'Outer');
-        console.error(err);
-      };
-      testInnerImg.src = `https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/rmsportal/VmvVUItLdPNqKlNGuRHi.png?t=${Date.now()}`;
+      // const testInnerImg = new Image();
+      // testInnerImg.onload = () => {
+      //   this.$isEle = true;
+      //   ga('send', 'event', 'DocView', 'Ali', 'Inner');
+      // };
+      // testInnerImg.onerror = (err) => {
+      //   ga('send', 'event', 'DocView', 'Ali', 'Outer');
+      //   console.error(err);
+      // };
+      // testInnerImg.src = `https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/rmsportal/VmvVUItLdPNqKlNGuRHi.png?t=${Date.now()}`;
     },
     methods: {
       switchVersion(version) {
@@ -497,10 +497,10 @@
       };
       xhr.open('GET', '/versions.json');
       xhr.send();
-      let primaryLast = '#409EFF';
+      let primaryLast = '#7A00A3';
       bus.$on(ACTION_USER_CONFIG_UPDATE, (val) => {
         let primaryColor = val.global['$--color-primary'];
-        if (!primaryColor) primaryColor = '#409EFF';
+        if (!primaryColor) primaryColor = '#7A00A3';
         const base64svg = 'data:image/svg+xml;base64,';
         const imgSet = document.querySelectorAll('h1 img');
         imgSet.forEach((img) => {

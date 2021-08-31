@@ -20,7 +20,7 @@
     'borderExtraLight': '$--border-color-extra-light'
   };
   const original = {
-    primary: '#409EFF',
+    primary: '#7A00A3',
     success: '#67C23A',
     warning: '#E6A23C',
     danger: '#F56C6C',
@@ -103,7 +103,7 @@ El color principal de Karman es el azul brillante y amigable.
       class="demo-color-box"
       :style="{ background: primary }"
     >
-      Brand Color<div class="value">#409EFF</div>
+      Brand Color<div class="value">#7A00A3</div>
     <div 
       class="bg-color-sub"
       :style="{ background: tintColor(primary, 0.9) }"

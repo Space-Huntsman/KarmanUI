@@ -11,11 +11,11 @@
     height: 50px;
     background: #e8f3fe;
     margin: 10px;
-    color: lighten(#1989fa, 20%);
+    color: lighten(#7A00A3, 20%);
     & + .list-item {
       margin-top: 10px
     }
-  } 
+  }
 }
 
 .infinite-list-wrapper {
@@ -27,7 +27,7 @@
     margin: 0;
     list-style: none;
   }
-    
+
 
   .list-item{
     display: flex;
@@ -41,6 +41,6 @@
     }
   }
 }
-   
 
- 
+
+

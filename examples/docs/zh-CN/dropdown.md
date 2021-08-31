@@ -25,7 +25,7 @@
 <style>
   .kui-dropdown-link {
     cursor: pointer;
-    color: #409EFF;
+    color: #7A00A3;
   }
   .kui-icon-arrow-down {
     font-size: 12px;
@@ -131,7 +131,7 @@
 <style>
   .kui-dropdown-link {
     cursor: pointer;
-    color: #409EFF;
+    color: #7A00A3;
   }
   .kui-icon-arrow-down {
     font-size: 12px;
@@ -168,7 +168,7 @@
 <style>
   .kui-dropdown-link {
     cursor: pointer;
-    color: #409EFF;
+    color: #7A00A3;
   }
   .kui-icon-arrow-down {
     font-size: 12px;
@@ -199,7 +199,7 @@
 <style>
   .kui-dropdown-link {
     cursor: pointer;
-    color: #409EFF;
+    color: #7A00A3;
   }
   .kui-icon-arrow-down {
     font-size: 12px;
