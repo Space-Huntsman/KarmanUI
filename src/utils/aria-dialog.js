@@ -27,7 +27,7 @@ aria.Dialog = function(dialog, focusAfterClosed, focusFirst) {
   }
 
   if (typeof focusAfterClosed === 'string') {
-    this.focusAfterClosed = document.getKarmanById(focusAfterClosed);
+    this.focusAfterClosed = document.getElementById(focusAfterClosed);
   } else if (typeof focusAfterClosed === 'object') {
     this.focusAfterClosed = focusAfterClosed;
   } else {
@@ -35,7 +35,7 @@ aria.Dialog = function(dialog, focusAfterClosed, focusFirst) {
   }
 
   if (typeof focusFirst === 'string') {
-    this.focusFirst = document.getKarmanById(focusFirst);
+    this.focusFirst = document.getElementById(focusFirst);
   } else if (typeof focusFirst === 'object') {
     this.focusFirst = focusFirst;
   } else {

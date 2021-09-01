@@ -218,7 +218,7 @@
           css: cssTpl,
           html: htmlTpl
         };
-        const form = document.getKarmanById('fiddle-form') || document.createElement('form');
+        const form = document.getElementById('fiddle-form') || document.createElement('form');
         while (form.firstChild) {
           form.removeChild(form.firstChild);
         }

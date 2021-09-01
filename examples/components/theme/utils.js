@@ -14,7 +14,7 @@ export const getThemeConfigObject = (config) => {
 };
 
 export const updateDomHeadStyle = (id, styleContent) => {
-  let styleTag = document.getKarmanById(id);
+  let styleTag = document.getElementById(id);
   if (!styleTag) {
     styleTag = document.createElement('style');
     styleTag.setAttribute('id', id);

@@ -45,7 +45,7 @@
             const originalCluster = this.getThemeCluster(ORIGINAL_THEME.replace('#', ''));
             let newStyle = this.updateStyle(this[variable], originalCluster, themeCluster);
 
-            let styleTag = document.getKarmanById(id);
+            let styleTag = document.getElementById(id);
             if (!styleTag) {
               styleTag = document.createElement('style');
               styleTag.setAttribute('id', id);
