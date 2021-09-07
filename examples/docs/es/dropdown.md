@@ -23,7 +23,7 @@ Pase el ratón por el menú desplegable para desplegarlo y obtener más acciones
 <style>
   .kui-dropdown-link {
     cursor: pointer;
-    color: #7A00A3;
+    color: #3366FF;
   }
   .kui-icon-arrow-down {
     font-size: 12px;
@@ -131,7 +131,7 @@ Haga clic en el karmano detonante o sobre él.
 <style>
   .kui-dropdown-link {
     cursor: pointer;
-    color: #7A00A3;
+    color: #3366FF;
   }
   .kui-icon-arrow-down {
     font-size: 12px;
@@ -169,7 +169,7 @@ Use `hide-on-click` para definir si el menú se cierra al hacer clic.
 <style>
   .kui-dropdown-link {
     cursor: pointer;
-    color: #7A00A3;
+    color: #3366FF;
   }
   .kui-icon-arrow-down {
     font-size: 12px;
@@ -200,7 +200,7 @@ Al hacer clic en cada karmano desplegable se detona un evento cuyo parámetro es
 <style>
   .kui-dropdown-link {
     cursor: pointer;
-    color: #7A00A3;
+    color: #3366FF;
   }
   .kui-icon-arrow-down {
     font-size: 12px;

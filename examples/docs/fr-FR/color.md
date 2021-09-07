@@ -20,18 +20,18 @@
     'borderExtraLight': '$--border-color-extra-light'
   };
   const original = {
-    primary: '#7A00A3',
+    primary: '#3366FF',
     success: '#67C23A',
     warning: '#E6A23C',
     danger: '#F56C6C',
     info: '#909399',
     white: '#FFFFFF',
     black: '#000000',
-    textPrimary: '#303133',
+    textPrimary: '#101840',
     textRegular: '#606266',
     textSecondary: '#909399',
-    textPlaceholder: '#C0C4CC',
-    borderBase: '#DCDFE6',
+    textPlaceholder: '#C1C4D6',
+    borderBase: '#E6E8F0',
     borderLight: '#E4E7ED',
     borderLighter: '#EBEEF5',
     borderExtraLight: '#F2F6FC'
@@ -100,7 +100,7 @@ La couleur principale d'Karman est un bleu clair et agréable.
 <kui-row :gutter="12">
   <kui-col :span="10" :xs="{span: 12}">
     <div class="demo-color-box" :style="{ background: primary }">Couleur principale
-      <div class="value">#7A00A3</div>
+      <div class="value">#3366FF</div>
       <div class="bg-color-sub" :style="{ background: tintColor(primary, 0.9) }">
         <div
           class="bg-blue-sub-item"
@@ -218,7 +218,7 @@ Les couleurs neutres sont les couleurs du fond, du texte et des bordures. Vous p
       >Noir<div class="value">{{black}}</div></div>
       <div
       class="demo-color-box demo-color-box-other"
-      :style="{ background: white, color: '#303133', border: '1px solid #eee' }"
+      :style="{ background: white, color: '#101840', border: '1px solid #eee' }"
       >Blanc<div class="value">{{white}}</div></div>
       <div class="demo-color-box demo-color-box-other bg-transparent">Transparent<div class="value">Transparent</div>
       </div>

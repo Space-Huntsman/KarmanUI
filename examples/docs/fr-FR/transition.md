@@ -35,7 +35,7 @@ Vous pouvez utiliser les transitions d'Karman directement. Mais avant ça, merci
     width: 200px;
     height: 100px;
     border-radius: 4px;
-    background-color: #7A00A3;
+    background-color: #3366FF;
     text-align: center;
     color: #fff;
     padding: 40px 20px;
@@ -84,7 +84,7 @@ Vous pouvez utiliser les transitions d'Karman directement. Mais avant ça, merci
     width: 200px;
     height: 100px;
     border-radius: 4px;
-    background-color: #7A00A3;
+    background-color: #3366FF;
     text-align: center;
     color: #fff;
     padding: 40px 20px;
@@ -131,7 +131,7 @@ Pour l'effet collapse, utilisez le composant `kui-collapse-transition`.
     width: 200px;
     height: 100px;
     border-radius: 4px;
-    background-color: #7A00A3;
+    background-color: #3366FF;
     text-align: center;
     color: #fff;
     padding: 40px 20px;

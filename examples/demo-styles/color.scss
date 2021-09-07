@@ -1,6 +1,6 @@
 .demo-color-box {
   position: relative;
-  border-radius: 4px;
+  border-radius: 0px;
   padding: 20px;
   margin: 5px 0;
   height: 114px;
@@ -17,7 +17,7 @@
 .demo-color-box-other {
   height: 74px;
   margin: 10px 0 !important;
-  border-radius: 4px 4px 4px 4px !important;
+  border-radius: 0 !important;
   padding: 15px 20px;
 }
 .demo-color-box-group {
@@ -26,10 +26,10 @@
     margin: 0;
   }
   .demo-color-box:first-child {
-    border-radius: 4px 4px 0 0;
+    border-radius:  0;
   }
   .demo-color-box:last-child {
-    border-radius: 0 0 4px 4px;
+    border-radius: 0;
   }
 }
 .bg-color-sub {
@@ -38,7 +38,7 @@
   left: 0;
   bottom: 0;
   position: absolute;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0;
 }
 .bg-blue-sub-item {
   width: 11.1111111%;
@@ -46,7 +46,7 @@
   display: inline-block;
 }
 .bg-blue-sub-item:first-child {
-  border-radius: 0 0 0 4px;
+  border-radius: 0;
 }
 .bg-success-sub-item {
   width: 50%;
@@ -54,19 +54,19 @@
   display: inline-block;
 }
 .bg-success-sub-item:first-child {
-  border-radius: 0 0 0 4px;
+  border-radius: 0;
 }
 .bg-success-sub-item:last-child {
-  border-radius: 0 0 4px 0;
+  border-radius: 0;
 }
 .bg-transparent {
   border: 1px solid #fcc3c3;
-  color: #303133;
+  color: #101840;
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M0 98 L100 0 L100 1 L1 98' fill='%23FCC3C3' /></svg>");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%, auto;
 }
 .demo-color-box-lite {
-  color: #303133;
+  color: #101840;
 }

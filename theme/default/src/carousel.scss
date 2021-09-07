@@ -22,19 +22,19 @@
     outline: none;
     padding: 0;
     margin: 0;
-    height: $--carouskui-arrow-size;
-    width: $--carouskui-arrow-size;
+    height: $--carousel-arrow-size;
+    width: $--carousel-arrow-size;
     cursor: pointer;
     transition: .3s;
     border-radius: 50%;
-    background-color: $--carouskui-arrow-background;
+    background-color: $--carousel-arrow-background;
     color: $--color-white;
     position: absolute;
     top: 50%;
     z-index: 10;
     transform: translateY(-50%);
     text-align: center;
-    font-size: $--carouskui-arrow-font-size;
+    font-size: $--carousel-arrow-font-size;
 
     @include m(left) {
       left: 16px;
@@ -45,7 +45,7 @@
     }
 
     &:hover {
-      background-color: $--carouskui-arrow-hover-background;
+      background-color: $--carousel-arrow-hover-background;
     }
 
     & i {
@@ -73,7 +73,7 @@
     }
 
     @include m(outside) {
-      bottom: #{$--carouskui-indicator-height + $--carouskui-indicator-padding-vertical * 2};
+      bottom: #{$--carousel-indicator-height + $--carousel-indicator-padding-vertical * 2};
       text-align: center;
       position: static;
       transform: none;
@@ -81,7 +81,7 @@
         opacity: 0.64;
       }
       button {
-        background-color: $--carouskui-indicator-out-color;
+        background-color: $--carousel-indicator-out-color;
         opacity: 0.24;
       }
     }
@@ -115,14 +115,14 @@
 
     @include m(horizontal) {
       display: inline-block;
-      padding: $--carouskui-indicator-padding-vertical $--carouskui-indicator-padding-horizontal;
+      padding: $--carousel-indicator-padding-vertical $--carousel-indicator-padding-horizontal;
     }
 
     @include m(vertical) {
-      padding: $--carouskui-indicator-padding-horizontal $--carouskui-indicator-padding-vertical;
+      padding: $--carousel-indicator-padding-horizontal $--carousel-indicator-padding-vertical;
       .kui-carousel__button {
-        width: $--carouskui-indicator-height;
-        height: #{$--carouskui-indicator-width / 2};
+        width: $--carousel-indicator-height;
+        height: #{$--carousel-indicator-width / 2};
       }
     }
 
@@ -136,8 +136,8 @@
   @include e(button) {
     display: block;
     opacity: 0.48;
-    width: $--carouskui-indicator-width;
-    height: $--carouskui-indicator-height;
+    width: $--carousel-indicator-width;
+    height: $--carousel-indicator-height;
     background-color: $--color-white;
     border: none;
     outline: none;
@@ -148,14 +148,14 @@
   }
 }
 
-.carouskui-arrow-left-enter,
-.carouskui-arrow-left-leave-active {
+.carousel-arrow-left-enter,
+.carousel-arrow-left-leave-active {
   transform: translateY(-50%) translateX(-10px);
   opacity: 0;
 }
 
-.carouskui-arrow-right-enter,
-.carouskui-arrow-right-leave-active {
+.carousel-arrow-right-enter,
+.carousel-arrow-right-leave-active {
   transform: translateY(-50%) translateX(10px);
   opacity: 0;
 }

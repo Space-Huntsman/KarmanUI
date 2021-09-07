@@ -33,7 +33,7 @@ La zone d'affichage est de 40px \* 40px.
         box-shadow: 0 0 6px rgba(0,0,0, .12);
         text-align: center;
         line-height: 40px;
-        color: #7A00A3;
+        color: #3366FF;
       }"
     >
       UP

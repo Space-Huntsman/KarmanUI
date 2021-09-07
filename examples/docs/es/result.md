@@ -48,7 +48,7 @@ Used to give feedback on the result of user's operation or access exception.
 ```html
 <kui-result title="404" subTitle="Sorry, request error">
   <template slot="icon">
-    <kui-image src="https://shadow.elemecdn.com/app/karman/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"></kui-image>
+    <kui-image src="https://picsum.photos/400/230?blur=5"></kui-image>
   </template>
   <template slot="extra">
     <kui-button type="primary" size="medium">Back</kui-button>

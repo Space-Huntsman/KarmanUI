@@ -4,7 +4,7 @@
   }
 
   #v3-banner {
-    background-color: #7A00A3;
+    background-color: #3366FF;
     min-height: 30px;
     padding: 5px 60px;
     z-index: 19;
@@ -32,7 +32,7 @@
     .container {
       height: 100%;
       box-sizing: border-box;
-      border-bottom: 1px solid #DCDFE6;
+      border-bottom: 1px solid #E6E8F0;
     }
 
     .nav-lang-spe {
@@ -133,18 +133,18 @@
           color: #888;
 
           &:hover {
-            color: #7A00A3;
+            color: #3366FF;
           }
           &.active {
              font-weight: bold;
-             color: #7A00A3;
+             color: #3366FF;
            }
         }
       }
 
       a {
         text-decoration: none;
-        color: #7A00A3;
+        color: #3366FF;
         opacity: 0.5;
         display: block;
         padding: 0 22px;
@@ -162,7 +162,7 @@
           left: calc(50% - 15px);
           width: 30px;
           height: 2px;
-          background: #7A00A3;
+          background: #3366FF;
         }
       }
     }
@@ -197,7 +197,7 @@
 
     .is-active {
       span, i {
-        color: #7A00A3;
+        color: #3366FF;
       }
       i {
         transform: rotateZ(180deg) translateY(3px);
@@ -206,7 +206,7 @@
 
     &:hover {
       span, i {
-        color: #7A00A3;
+        color: #3366FF;
       }
     }
   }
@@ -282,29 +282,20 @@
 </style>
 <template>
   <div class="headerWrapper">
-    <div id="v3-banner" v-if="isHome">
-      <template v-if="lang === 'zh-CN'">
-        您正在浏览基于 Vue 2.x 的 Karman UI 文档;
-        <a href="https://karman-plus.org/#/zh-CN">点击这里</a> 查看 Vue 3.x 的升级版本
-      </template>
-      <template v-else>
-        You’re browsing the documentation of Karman UI for Vue 2.x version.
-        <a href="https://karman-plus.org">Click here</a> for Vue 3.x version
-      </template>
-    </div>
+
     <header class="header" ref="header">
       <div class="container">
         <h1><router-link :to="`/${ lang }`">
           <!-- logo -->
           <slot>
             <img
-              src="../assets/images/karman-logo.svg"
+              src="../assets/images/logo/logo.png"
               alt="karman-logo"
-              class="nav-logo">
+              class="nav-logo" height="60">
             <img
-              src="../assets/images/karman-logo-small.svg"
+              src="../assets/images/logo/logo-mini.png"
               alt="karman-logo"
-              class="nav-logo-small">
+              class="nav-logo-small" height="60">
           </slot>
 
         </router-link></h1>
@@ -314,10 +305,10 @@
           <li class="nav-item nav-algolia-search" v-show="isComponentPage">
             <algolia-search></algolia-search>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" >
             <router-link
               active-class="active"
-              :to="`/${ lang }/guide`">{{ langConfig.guide }}
+              :to="`/${ lang }/home`">{{ langConfig.home }}
             </router-link>
           </li>
           <li class="nav-item">
@@ -326,19 +317,12 @@
               :to="`/${ lang }/component`">{{ langConfig.components }}
             </router-link>
           </li>
-          <li
+          <li v-if="false"
             class="nav-item nav-item-theme"
           >
             <router-link
               active-class="active"
               :to="`/${ lang }/theme`">{{ langConfig.theme }}
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link
-              active-class="active"
-              :to="`/${ lang }/resource`"
-              exact>{{ langConfig.resource }}
             </router-link>
           </li>
 
@@ -372,7 +356,7 @@
           </li>
 
           <!-- 语言选择器 -->
-          <li class="nav-item lang-item">
+          <li class="nav-item lang-item" v-if="false">
             <kui-dropdown
               trigger="click"
               class="nav-dropdown nav-lang"
@@ -497,10 +481,10 @@
       };
       xhr.open('GET', '/versions.json');
       xhr.send();
-      let primaryLast = '#7A00A3';
+      let primaryLast = '#3366FF';
       bus.$on(ACTION_USER_CONFIG_UPDATE, (val) => {
         let primaryColor = val.global['$--color-primary'];
-        if (!primaryColor) primaryColor = '#7A00A3';
+        if (!primaryColor) primaryColor = '#3366FF';
         const base64svg = 'data:image/svg+xml;base64,';
         const imgSet = document.querySelectorAll('h1 img');
         imgSet.forEach((img) => {

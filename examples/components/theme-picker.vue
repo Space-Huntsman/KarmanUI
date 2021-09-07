@@ -25,7 +25,7 @@
   import Karman from 'main/index.js';
   const { version } = Karman;
 
-  const ORIGINAL_THEME = '#7A00A3';
+  const ORIGINAL_THEME = '#3366FF';
   export default {
     data() {
       return {

@@ -23,7 +23,7 @@ Hover on the dropdown menu to unfold it for more actions.
 <style>
   .kui-dropdown-link {
     cursor: pointer;
-    color: #7A00A3;
+    color: #3366FF;
   }
   .kui-icon-arrow-down {
     font-size: 12px;
@@ -130,7 +130,7 @@ Click the triggering karman or hover on it.
 <style>
   .kui-dropdown-link {
     cursor: pointer;
-    color: #7A00A3;
+    color: #3366FF;
   }
   .kui-icon-arrow-down {
     font-size: 12px;
@@ -167,7 +167,7 @@ Use `hide-on-click` to define if menu closes on clicking.
 <style>
   .kui-dropdown-link {
     cursor: pointer;
-    color: #7A00A3;
+    color: #3366FF;
   }
   .kui-icon-arrow-down {
     font-size: 12px;
@@ -198,7 +198,7 @@ Clicking each dropdown item fires an event whose parameter is assigned by each i
 <style>
   .kui-dropdown-link {
     cursor: pointer;
-    color: #7A00A3;
+    color: #3366FF;
   }
   .kui-icon-arrow-down {
     font-size: 12px;

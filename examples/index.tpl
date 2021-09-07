@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_137970_p1tpzmomxp9cnmi.css">
-    <link rel='mask-icon' href="https://raw.githubusercontent.com/spaceHuntsman/karman/dev/examples/assets/images/karman-logo-small.svg" color="#7A00A3">
-    <link rel="stylesheet" href="//shadow.elemecdn.com/npm/highlight.js@9.3.0/styles/color-brewer.css">
+    <link rel='mask-icon' href="/assets/images/logo/logo-mini.png" color="#3366FF">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/idea.min.css">
     <title>Karman - The world's most popular Vue UI framework</title>
     <meta name="description" content="Karman，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库" />
   </head>
@@ -17,17 +16,12 @@
     </script>
     <div id="app"></div>
     <% if (process.env.NODE_ENV === 'production') { %>
-      <script src="//shadow.elemecdn.com/npm/vue@2.5.21/dist/vue.runtime.min.js"></script>
-      <script src="//shadow.elemecdn.com/npm/vue-router@3.0.1/dist/vue-router.min.js"></script>
-      <script src="//shadow.elemecdn.com/app/karman/highlight.pack.b1f71b31-3c07-11e9-ba1a-55bba1877129.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/vue/3.2.9/vue.runtime.global.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/vue-router/4.0.11/vue-router.global.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <% } %>
   </body>
   <% if (process.env.NODE_ENV === 'production') { %><script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
     ga('create', 'UA-84335471-1', 'auto');
     ga('send', 'pageview');
 

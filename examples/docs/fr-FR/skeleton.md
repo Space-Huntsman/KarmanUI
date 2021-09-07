@@ -99,7 +99,7 @@ When `Loading` ends, we always need to show the real UI with data to our end use
       <template>
         <kui-card :body-style="{ padding: '0px', marginBottom: '1px' }">
           <img
-            src="https://shadow.elemecdn.com/app/karman/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
+            src="https://picsum.photos/400/230?blur=5"
             class="image"
           />
           <div style="padding: 14px;">
@@ -261,7 +261,7 @@ Sometimes API responds very quickly, when that happens, the skeleton just gets r
       <template>
         <kui-card :body-style="{ padding: '0px', marginBottom: '1px'}">
           <img
-            src="https://shadow.elemecdn.com/app/karman/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
+            src="https://picsum.photos/400/230?blur=5"
             class="image"
           />
           <div style="padding: 14px;">
