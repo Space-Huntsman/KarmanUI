@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel='mask-icon' href="/assets/images/logo/logo-mini.png" color="#3366FF">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/idea.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/shades-of-purple.min.css">
     <title>Karman - The world's most popular Vue UI framework</title>
     <meta name="description" content="Karman，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库" />
   </head>
