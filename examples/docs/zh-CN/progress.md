@@ -63,12 +63,12 @@
     data() {
       return {
         percentage: 20,
-        customColor: '#7A00A3',
+        customColor: '#3366FF',
         customColors: [
           {color: '#f56c6c', percentage: 20},
           {color: '#e6a23c', percentage: 40},
           {color: '#5cb87a', percentage: 60},
-          {color: '#7A00A3', percentage: 80},
+          {color: '#3366FF', percentage: 80},
           {color: '#6f7ad3', percentage: 100}
         ]
       };
@@ -139,7 +139,7 @@ Progress 组件可通过 `type` 属性来指定使用环形进度条，在环形
           {color: '#f56c6c', percentage: 20},
           {color: '#e6a23c', percentage: 40},
           {color: '#5cb87a', percentage: 60},
-          {color: '#7A00A3', percentage: 80},
+          {color: '#3366FF', percentage: 80},
           {color: '#6f7ad3', percentage: 100}
         ]
       };

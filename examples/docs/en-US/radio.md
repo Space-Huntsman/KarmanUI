@@ -196,7 +196,7 @@ value / v-model | binding value | string / number / boolean | — | —
 size | the size of radio buttons or bordered radios | string | medium / small / mini | —
 disabled  | whether the nesting radios are disabled | boolean   | — | false
 text-color | font color when button is active | string   | — | #ffffff   |
-fill  | border and background color when button is active | string   | — | #7A00A3   |
+fill  | border and background color when button is active | string   | — | #3366FF   |
 
 ### Radio-group Events
 

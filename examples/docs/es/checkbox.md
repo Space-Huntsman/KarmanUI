@@ -266,7 +266,7 @@ Checkbox con estilo tipo Botón.
 | min        | cantidad mínima de checkboxes que deben ser marcados | number  | —                     | —           |
 | max        | cantidad máxima de checkboxes que pueden ser marcados | number  | —                     | —           |
 | text-color | color de fuente cuando el botón está activo | string  | —                     | #ffffff     |
-| fill       | color de border y de fondo cuando el botón está activo | string  | —                     | #7A00A3     |
+| fill       | color de border y de fondo cuando el botón está activo | string  | —                     | #3366FF     |
 
 ### Eventos de Checkbox-group
 | Nombre de Evento | Descripción                                | Parámetros           |

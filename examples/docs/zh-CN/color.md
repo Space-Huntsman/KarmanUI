@@ -20,18 +20,18 @@
     'borderExtraLight': '$--border-color-extra-light'
   };
   const original = {
-    primary: '#7A00A3',
+    primary: '#3366FF',
     success: '#67C23A',
     warning: '#E6A23C',
     danger: '#F56C6C',
     info: '#909399',
     white: '#FFFFFF',
     black: '#000000',
-    textPrimary: '#303133',
+    textPrimary: '#101840',
     textRegular: '#606266',
     textSecondary: '#909399',
-    textPlaceholder: '#C0C4CC',
-    borderBase: '#DCDFE6',
+    textPlaceholder: '#C1C4D6',
+    borderBase: '#E6E8F0',
     borderLight: '#E4E7ED',
     borderLighter: '#EBEEF5',
     borderExtraLight: '#F2F6FC'
@@ -101,7 +101,7 @@ Karman 主要品牌颜色是鲜艳、友好的蓝色。
 <kui-row :gutter="12">
   <kui-col :span="10" :xs="{span: 12}">
     <div class="demo-color-box" :style="{ background: primary }">Brand Color
-      <div class="value">#7A00A3</div>
+      <div class="value">#3366FF</div>
       <div class="bg-color-sub" :style="{ background: tintColor(primary, 0.9) }">
         <div
           class="bg-blue-sub-item"
@@ -235,7 +235,7 @@ Karman 主要品牌颜色是鲜艳、友好的蓝色。
       >基础黑色<div class="value">{{black}}</div></div>
       <div
       class="demo-color-box demo-color-box-other"
-      :style="{ background: white, color: '#303133', border: '1px solid #eee' }"
+      :style="{ background: white, color: '#101840', border: '1px solid #eee' }"
       >基础白色<div class="value">{{white}}</div></div>
       <div class="demo-color-box demo-color-box-other bg-transparent">透明<div class="value">Transparent</div>
       </div>

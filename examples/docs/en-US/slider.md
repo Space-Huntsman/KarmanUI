@@ -199,7 +199,7 @@ Selecting a range of values is supported.
           37: '37°C',
           50: {
             style: {
-              color: '#7A00A3'
+              color: '#3366FF'
             },
             label: this.$createElement('strong', '50%')
           }

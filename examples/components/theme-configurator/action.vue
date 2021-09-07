@@ -75,20 +75,20 @@
       .kui-button {
         padding: 6px 15px;
         &.is-disabled {
-          color: #C0C4CC;
+          color: #C1C4D6;
           background-color: #fff;
           border-color: #EBEEF5;
         }
       }
       .reset {
         background: #E6F1FC;
-        color: #7A00A3;
+        color: #3366FF;
         border-color: #A2CFFC;
       }
       .download {
-        background: #7A00A3;
+        background: #3366FF;
         color: #FFF;
-        border-color: #7A00A3
+        border-color: #3366FF
       }
     }
   }
@@ -105,7 +105,7 @@
   .line {
     width: 100%;
     height: 0;
-    border-bottom: 1px solid #DCDFE6;
+    border-bottom: 1px solid #E6E8F0;
   }
 }
 </style>

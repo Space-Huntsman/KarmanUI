@@ -66,7 +66,7 @@ et -i [custom output file]
 
 En el archivo `karman-variables.scss` podrá encontrar todas las variables que utiliza Karman para definir los estilos y estos están definidos en SCSS. Aquí un ejemplo:
 ```css
-$--color-primary: #7A00A3 !default;
+$--color-primary: #3366FF !default;
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 53a8ff */
 $--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 66b1ff */
 $--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; /* 79bbff */

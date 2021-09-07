@@ -1,26 +1,18 @@
 {
   "zh-CN": {
     "home": "Karman - 网站快速成型工具",
-    "guide": "指南 | Karman",
-    "component": "组件 | Karman",
-    "resource": "资源 | Karman"
+    "component": "组件 | Karman"
   },
   "en-US": {
     "home": "Karman - A Desktop UI Toolkit for Web",
-    "guide": "Guide | Karman",
-    "component": "Component | Karman",
-    "resource": "Resource | Karman"
+    "component": "Component | Karman"
   },
   "es": {
     "home": "Karman - Un kit de interfaz de usuario para la web",
-    "guide": "Guía | Karman",
-    "component": "Componentes | Karman",
-    "resource": "Recursos | Karman"
+    "component": "Componentes | Karman"
   },
   "fr-FR": {
     "home": "Karman - Un kit de composants d'interface pour le web",
-    "guide": "Guide | Karman",
-    "component": "Composants | Karman",
-    "resource": "Ressources | Karman"
+    "component": "Composants | Karman"
   }
 }

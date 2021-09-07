@@ -21,6 +21,7 @@
       "eleme": "饿了么"
     },
     "header": {
+      "home": "首页",
       "guide": "指南",
       "components": "组件",
       "theme": "主题",
@@ -52,6 +53,7 @@
       "eleme": "Eleme"
     },
     "header": {
+      "home": "Home",
       "guide": "Guide",
       "components": "Component",
       "theme": "Theme",
@@ -83,6 +85,7 @@
       "eleme": "Eleme"
     },
     "header": {
+      "home": "Home",
       "guide": "Guía",
       "components": "Componentes",
       "theme": "Theme",
@@ -114,6 +117,7 @@
       "eleme": "Eleme"
     },
     "header": {
+      "home": "La maison",
       "guide": "Guide",
       "components": "Composants",
       "theme": "Theme",

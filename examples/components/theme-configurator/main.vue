@@ -2,13 +2,13 @@
   <div class="editor-main" ref="mainPanel">
     <!-- <span>{{configName}}</span> -->
     <div v-for="(config, key) in configByOrder" :key="key">
-      <span 
+      <span
         v-if="showCategory(config.category, key + 1)"
         class="category-name"
       >
         {{config.category}}
       </span>
-      <component 
+      <component
         :is="editorComponent(config.type)"
         :componentName=configName
         :config=config
@@ -27,7 +27,7 @@
   overflow-y: auto;
 }
 .category-name {
-  color: #C0C4CC;
+  color: #C1C4D6;
   font-size: 18px;
   display: block;
   margin: 13px 0 3px 0;

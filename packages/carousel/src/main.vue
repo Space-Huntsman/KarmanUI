@@ -8,7 +8,7 @@
       :style="{ height: height }">
       <transition
         v-if="arrowDisplay"
-        name="carouskui-arrow-left">
+        name="carousel-arrow-left">
         <button
           type="button"
           v-show="(arrow === 'always' || hover) && (loop || activeIndex > 0)"
@@ -21,7 +21,7 @@
       </transition>
       <transition
         v-if="arrowDisplay"
-        name="carouskui-arrow-right">
+        name="carousel-arrow-right">
         <button
           type="button"
           v-show="(arrow === 'always' || hover) && (loop || activeIndex < items.length - 1)"
@@ -122,9 +122,9 @@ export default {
     },
 
     carouselClasses() {
-      const classes = ['kui-carousel', 'kui-carouskui--' + this.direction];
+      const classes = ['kui-carousel', 'kui-carousel--' + this.direction];
       if (this.type === 'card') {
-        classes.push('kui-carouskui--card');
+        classes.push('kui-carousel--card');
       }
       return classes;
     },

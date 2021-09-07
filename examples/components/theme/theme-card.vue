@@ -125,7 +125,7 @@
     .title {
       font-weight: bold;
       font-size: 16px;
-      color: #303133;
+      color: #101840;
       padding: 0 12px;
       justify-content: space-between;
     }
@@ -148,7 +148,7 @@
   }
   &.is-upload {
     box-shadow: none;
-    border: 1px dashed #DCDFE6;
+    border: 1px dashed #E6E8F0;
   }
   &.is-upload:hover {
     box-shadow: none;
@@ -353,7 +353,7 @@ export default {
       return DEFAULT_THEME_CONFIG;
     },
     mainColor() {
-      return this.theme.global['$--color-primary'] || '#7A00A3';
+      return this.theme.global['$--color-primary'] || '#3366FF';
     },
     mainColor50() {
       return tintColor(this.mainColor, 0.5);
@@ -362,10 +362,10 @@ export default {
       return tintColor(this.mainColor, 0.8);
     },
     textPrimaryColor() {
-      return this.theme.global['$--color-text-primary'] || '#303133';
+      return this.theme.global['$--color-text-primary'] || '#101840';
     },
     borderBaseColor() {
-      return this.theme.global['$--border-color-base'] || '#DCDFE6';
+      return this.theme.global['$--border-color-base'] || '#E6E8F0';
     },
     textSecondaryColor() {
       return this.theme.global['$--color-text-secondary'] || '#909399';

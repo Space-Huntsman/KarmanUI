@@ -115,7 +115,7 @@
         <kui-col :span="4">
           <div
             class="demo-color-box demo-color-box-other"
-            :style="{ background: color_white, color: '#303133', border: '1px solid #eee' }"
+            :style="{ background: color_white, color: '#101840', border: '1px solid #eee' }"
           >
             Background W
             <div class="value">{{color_white}}</div>
@@ -174,18 +174,18 @@ import {
 } from './constant.js';
 
 const original = {
-  'color_primary': '#7A00A3',
+  'color_primary': '#3366FF',
   'color_success': '#67C23A',
   'color_warning': '#E6A23C',
   'color_danger': '#F56C6C',
   'color_info': '#909399',
   'color_white': '#FFFFFF',
   'color_black': '#000000',
-  'color_text_primary': '#303133',
+  'color_text_primary': '#101840',
   'color_text_regular': '#606266',
   'color_text_secondary': '#909399',
-  'color_text_placeholder': '#C0C4CC',
-  'border_color_base': '#DCDFE6',
+  'color_text_placeholder': '#C1C4D6',
+  'border_color_base': '#E6E8F0',
   'border_color_light': '#E4E7ED',
   'border_color_lighter': '#EBEEF5',
   'border_color_extra_light': '#F2F6FC',

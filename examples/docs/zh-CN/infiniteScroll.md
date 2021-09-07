@@ -16,7 +16,7 @@
   export default {
     data () {
       return {
-        count: 0
+        count: 10
       }
     },
     methods: {
@@ -64,6 +64,7 @@
     },
     methods: {
       load () {
+    
         this.loading = true
         setTimeout(() => {
           this.count += 2

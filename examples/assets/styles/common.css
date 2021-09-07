@@ -40,7 +40,7 @@ html, body {
 }
 
 a {
-  color:#7A00A3;
+  color:#3366FF;
   text-decoration: none;
 }
 
@@ -123,9 +123,9 @@ button, input, select, textarea {
 
   .tip {
     padding: 8px 16px;
-    background-color: #f8e1ff;
+    background-color: rgba(51, 102, 255, 0.06);
     border-radius: 4px;
-    border-left: #7A00A3 5px solid;
+    border-left: #3366FF 5px solid;
     margin: 20px 0;
 
     code {

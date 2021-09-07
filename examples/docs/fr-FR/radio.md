@@ -196,7 +196,7 @@ Des radios affichés comme des boutons standards.
 | size | Taille des radios. | string | medium / small / mini | —
 | disabled  | Si les radios sont désactivés. | boolean   | — | false
 | text-color | Couleur du texte quand le bouton est actif. | string | — | #ffffff   |
-| fill  | Bordure et couleur de fond quand le bouton est actif. | string | — | #7A00A3 |
+| fill  | Bordure et couleur de fond quand le bouton est actif. | string | — | #3366FF |
 
 ### Évènements de Radio-group
 

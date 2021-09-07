@@ -101,7 +101,7 @@ KarmanPlus 提供的排版模式有时候并不满足要求，当您想要用自
       <template>
         <kui-card :body-style="{ padding: '0px', marginBottom: '1px' }">
           <img
-            src="https://shadow.elemecdn.com/app/karman/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
+            src="https://picsum.photos/400/230?blur=5"
             class="image"
           />
           <div style="padding: 14px;">
@@ -262,7 +262,7 @@ KarmanPlus 提供的排版模式有时候并不满足要求，当您想要用自
       <template>
         <kui-card :body-style="{ padding: '0px', marginBottom: '1px'}">
           <img
-            src="https://shadow.elemecdn.com/app/karman/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
+            src="https://picsum.photos/400/230?blur=5"
             class="image"
           />
           <div style="padding: 14px;">

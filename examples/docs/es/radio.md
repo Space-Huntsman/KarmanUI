@@ -196,7 +196,7 @@ Radio con estilo de botón.
 | size       | tamaño de los `radio buttons` o `bordered radios` | string  | medium / small / mini | —                   |
 | disabled   | si la anidación de radios está deshabilitada | boolean | —                     | false               |
 | text-color | color de las letras cuando el botón está activo | string  | —                     | #ffffff             |
-| fill       | color del borde y fondo cuando el botón está activo | string  | —                     | #7A00A3             |
+| fill       | color del borde y fondo cuando el botón está activo | string  | —                     | #3366FF             |
 
 ### Eventos de Radio 
 
