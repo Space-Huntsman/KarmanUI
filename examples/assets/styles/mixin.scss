@@ -1,0 +1,6 @@
+@mixin calcWidth($width,$type:width) {
+  #{$type}:calc(#{$width / 1920} * 100vw);
+}
+@mixin calcHeight($height,$type:height) {
+  #{$type}:calc(#{$height / 1080} * 100vh);
+}

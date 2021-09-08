@@ -1,10 +1,14 @@
 <template>
   <div id="app" :class="{ 'is-component': isComponent }">
-    <main-header v-if="lang !== 'play'"></main-header>
-    <div class="main-cnt">
+
+    <main-header v-if="lang !== 'play'&& isComponent"></main-header>
+    <div class="main-cnt" v-if="isComponent">
       <router-view></router-view>
     </div>
-    <main-footer v-if="lang !== 'play' && !isComponent"></main-footer>
+    <div v-else>
+      <router-view></router-view>
+    </div>
+<!--    <main-footer v-if="lang !== 'play' && !isComponent"></main-footer>-->
   </div>
 </template>
 

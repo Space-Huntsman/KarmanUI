@@ -1,377 +1,163 @@
-<style scoped>
-  .banner {
-    text-align: center;
+<template>
+    <div class="home-container">
+        <div class="content">
+            <span class="slogen"></span>
+            <p class="intro"> 基于 Vue 2.x
+                开发的高质量桌面端UI组件库，作为首个提供航天工程类UI组件库，该组件库不仅可满足常规项目组件使用需求，同时还包含了一些航天测运控方向显示组件，目前已经可满足轨道根数、预报、星下点等显示需求。
+            </p>
+        </div>
+
+
+        <div class="space">
+            <div class="space-stars"></div>
+            <div class="space-red-star"></div>
+            <div class="space-rocket"></div>
+            <div class="space-blue-star"></div>
+            <div class="space-satellite"></div>
+        </div>
+        <div class="space-bottom-hole"></div>
+    </div>
+</template>
+<style lang="scss">
+  @mixin calcVw($width,$type:width) {
+     #{$type}:calc(#{$width / 1920} * 100vw);
   }
-  .banner-desc {
-    padding-top: 50px;
-
-    h1 {
-      font-size: <%= titleSize >px;
-      margin: 0;
-      line-height: 48px;
-      color: #555;
-    }
-
-    p {
-      font-size: <%= paraSize >px;
-      line-height: 28px;
-      color: #888;
-      margin: 10px 0 5px;
-    }
+  @mixin calcVh($height,$type:height) {
+    #{$type}:calc(#{$height / 1080} * 100vh);
   }
-  .sponsors {
-    display: flex;
-    justify-content: center;
-  }
-  .sponsor {
-    margin: 0 20px 50px;
-    display: inline-flex;
-    width: 300px;
-    height: 100px;
-    justify-content: center;
 
-    img {
-      margin-right: 20px;
-    }
-
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    p {
-      margin: 0;
-      line-height: 1.8;
-      color: #999;
-      font-size: 14px;
-    }
-  }
-  .jumbotron {
-    width: 890px;
-    margin: 30px auto;
-    position: relative;
-    img {
-      width: 100%;
-    }
-    .jumbotron-red {
-      transition: height .1s;
-      background: #FFF;
-      position: absolute;
-      left: 0;
-      top:0;
-      overflow: hidden;
-    }
-  }
-  .cards {
-    margin: 0 auto 110px;
-    width: 1140px;
-
-    .container {
-      padding: 0;
-      margin: 0 -11px;
-      width: auto;
-      &::before, &::after {
-        display: table;
-        content: "";
-      }
-      &::after {
-        clear: both;
-      }
-    }
-
-
-    li {
-      width: 25%;
-      padding: 0 19px;
-      box-sizing: border-box;
-      float: left;
-      list-style: none;
-    }
-
-    img {
-      width: 160px;
-      height: 120px;
-    }
-  }
-  .card {
-    height: 430px;
+  .home-container {
+    padding: 0;
+    margin: 0;
     width: 100%;
-    background:#ffffff;
-    border:1px solid #eaeefb;
-    border-radius:5px;
-    box-sizing: border-box;
-    text-align: center;
+    height: 100vh;
+    background: #FFFFFF;
+    overflow: hidden;
     position: relative;
-    transition: all .3s ease-in-out;
-    bottom: 0;
 
-    img {
-      margin: 66px auto 60px;
-    }
-    h3 {
-      margin: 0;
-      font-size: 18px;
-      color: #1f2f3d;
-      font-weight: normal;
-    }
-    p {
-      font-size: 14px;
-      color: #99a9bf;
-      padding: 0 25px;
-      line-height: 20px;
-    }
-    a {
-      height: 53px;
-      line-height: 52px;
-      font-size: 14px;
-      color: #3366FF;
-      text-align: center;
-      border: 0;
-      border-top: 1px solid #eaeefb;
-      padding: 0;
-      cursor: pointer;
-      width: 100%;
+    & > .content {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: #fff;
-      border-radius: 0 0 5px 5px;
-      transition: all .3s;
-      text-decoration: none;
-      display: block;
+      z-index: 2;
+      left: 54px;
+      top: 32%;
 
-      &:hover {
-        color: #fff;
-        background: #3366FF;
+      .slogen {
+        background-image: url("~examples/assets/images/home/slogen.png");
+        background-size: cover;
+        display: block;
+        width: 403px;
+        height: 64px;
       }
-    }
-    &:hover {
-      bottom: 6px;
-      box-shadow: 0 6px 18px 0 rgba(232,237,250,0.50);
-    }
-  }
-  @media (max-width: 1140px) {
-    .cards {
-      width: 100%;
-      .container {
-        width: 100%;
-        margin: 0;
-      }
-    }
-    .banner .container {
-      width: 100%;
-      box-sizing: border-box;
-    }
-    .banner img {
-      right: 0;
-    }
-  }
 
-  @media (max-width: 1000px) {
-    .banner .container {
-      img {
-        display: none;
+      & > .intro {
+        margin-top: 60px;
+        width: 45%;
+        height: 13%;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 40px;
+        color: #3A3A3A;
+        letter-spacing: 6px;
+        text-indent: 2em;
       }
     }
-    .jumbotron {
-      display: none;
-    }
-  }
 
-  @media (max-width: 768px) {
-    .cards {
-      li {
-        width: 80%;
-        margin: 0 auto 20px;
-        float: none;
-      }
-      .card {
-        height: auto;
-        padding-bottom: 54px;
-      }
-    }
-    .banner-stars {
-      display: none;
-    }
-    .banner-desc {
-      #line2 {
-        display: none;
-      }
-      h2 {
-        font-size: 32px;
-      }
-      p {
-        width: auto;
-      }
-    }
-  }
-  .theme-intro-b {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 200;
-    .intro-banner {
-      position: absolute
-    }
-    img {
-      width: 300px;
-    }
-    .title {
+    & > .space {
+      background-image: url("~examples/assets/images/home/space-bg.jpg");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
       position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      color: #FFF;
-      text-align: center;
-      font-weight: bold;
-      font-size: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      p {
-        padding: 0;
-        margin: 10px 0;
-      }
-    }
-  }
-  .theme-intro-a {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 200;
-    .mask{
-      position: fixed;
-      left: 0;
+      z-index: 1;
       right: 0;
       top: 0;
-      bottom: 0;
-      background: #000;
-      opacity: .5;
-    }
-    .intro-banner {
-      top: 50%;
-      left: 50%;
-      position: fixed;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      box-sizing: border-box;
-      text-align: center;
-      z-index: 100;
-      img {
-        width: 100%;
-      }
-      .intro-text {
+      width: 66%;
+      height: 91%;
+
+      & .space-stars {
+        background-image: url("~examples/assets/images/home/space-stars.png");
+        background-size: cover;
+        background-repeat: no-repeat;
         position: absolute;
-        top: 50%;
-        left: 0;
+        z-index: 1;
         right: 0;
-        p {
-          padding: 0;
-          margin: 0;
-          font-size: 48px;
-          font-weight: bold;
-          color: #FFF;
-        }
+        top: 0;
+        width: 100%;
+        height: 100%;
       }
+
+      & .space-red-star {
+        background-image: url("~examples/assets/images/home/space-red-star.png");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: 0;
+        @include calcVw(707);
+        @include calcVw(222,right);
+        @include calcVh(496);
+        @include calcVh(435,top);
+      }
+
+      & .space-rocket {
+        background-image: url("~examples/assets/images/home/space-rocket.png");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: 0;
+        @include calcVw(453);
+        @include calcVw(702,right);
+        @include calcVh(540);
+        @include calcVh(108,top);
+      }
+      & .space-blue-star {
+        background-image: url("~examples/assets/images/home/space-blue-star.png");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: 0;
+        @include calcVw(91);
+        @include calcVw(524,right);
+        @include calcVh(91);
+        @include calcVh(206,top);
+      }
+      & .space-satellite {
+        background-image: url("~examples/assets/images/home/space-satellite.png");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: 0;
+        @include calcVw(364);
+        @include calcVw(55,right);
+        @include calcVh(359);
+        @include calcVh(34,top);
+      }
+    }
+
+    & > .space-bottom-hole {
+      background-image: url("~examples/assets/images/home/space-bottom-hole.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      z-index: 1;
+      left: -7%;
+      bottom: -29%;
+      width: 29%;
+      height: 50%;
     }
   }
 </style>
-<template>
-  <div>
-    <div class="banner">
-      <div class="banner-desc">
-        <h1><%= 1 ></h1>
-        <p><%= 2 ></p>
-      </div>
-    </div>
-    <div class="jumbotron" ref="indexMainImg">
-      <img src="~examples/assets/images/theme-index-blue.png" alt="">
-      <div class="jumbotron-red" :style="{
-           height: mainImgOffset + 'px'
-         }">
-        <img src="~examples/assets/images/theme-index-red.png" alt="">
-      </div>
-    </div>
-    <div class="cards">
-      <ul class="container">
-        <li>
-          <div class="card">
-            <img src="~examples/assets/images/guide.png" alt="">
-            <h3><%= 3 ></h3>
-            <p><%= 4 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/guide/design"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="~examples/assets/images/component.png" alt="">
-            <h3><%= 6 ></h3>
-            <p><%= 7 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/component/layout"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="~examples/assets/images/theme-index-icon.svg" alt="">
-            <h3><%= 10 ></h3>
-            <p><%= 11 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/theme"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="~examples/assets/images/resource.png" alt="">
-            <h3><%= 8 ></h3>
-            <p><%= 9 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/resource"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</template>
 <script>
-  import throttle from 'throttle-debounce/throttle';
-
   export default {
     created() {
-      this.throttledHandleScroll = throttle(10, true, index => {
-        this.handleScroll(index);
-      });
     },
-    methods: {
-      handleScroll(index) {
-        const ele = this.$refs.indexMainImg;
-        const rect = ele.getBoundingClientRect();
-        const eleHeight = ele.clientHeight + 55;
-        let calHeight = (180 - rect.top) * 2;
-        if (calHeight < 0) calHeight = 0;
-        if (calHeight > eleHeight) calHeight = eleHeight;
-        this.mainImgOffset = calHeight;
-      }
-    },
+    methods: {},
     data() {
       return {
         lang: this.$route.meta.lang,
@@ -379,10 +165,8 @@
       };
     },
     beforeDestroy() {
-      window.removeEventListener('scroll', this.throttledHandleScroll);
     },
     mounted() {
-      window.addEventListener('scroll', this.throttledHandleScroll);
     }
   };
 </script>
