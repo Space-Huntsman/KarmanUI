@@ -36,39 +36,14 @@
 
     watch: {
       lang(val) {
-        if (val === 'zh-CN') {
-          this.suggestJump();
-        }
-        localize(val);
+        // localize(val);
       }
     },
 
     methods: {
-      suggestJump() {
-        if (process.env.NODE_ENV !== 'production') return;
-
-        const href = location.href;
-        const preferGithub = localStorage.getItem('PREFER_GITHUB');
-        const cnHref = href.indexOf('eleme.cn') > -1 || href.indexOf('karman-cn') > -1 || href.indexOf('karman.faas') > -1;
-        if (cnHref || preferGithub) return;
-        setTimeout(() => {
-          if (this.lang !== 'zh-CN') return;
-          this.$confirm('建议大陆用户访问部署在国内的站点，是否跳转？', '提示')
-            .then(() => {
-              location.replace('https://karman.eleme.cn');
-            })
-            .catch(() => {
-              localStorage.setItem('PREFER_GITHUB', 'true');
-            });
-        }, 1000);
-      }
     },
 
     mounted() {
-      localize(this.lang);
-      if (this.lang === 'zh-CN') {
-        this.suggestJump();
-      }
     }
   };
 </script>
