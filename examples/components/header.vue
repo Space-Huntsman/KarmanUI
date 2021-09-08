@@ -113,9 +113,6 @@
       position: relative;
       cursor: pointer;
 
-      &.nav-algolia-search {
-        cursor: default;
-      }
 
       &.lang-item,
       &:last-child {
@@ -235,9 +232,7 @@
           padding: 0 5px;
         }
       }
-      .nav-theme-switch, .nav-algolia-search {
-        display: none;
-      }
+
     }
   }
 
@@ -291,20 +286,18 @@
             <img
               src="../assets/images/logo/logo.png"
               alt="karman-logo"
-              class="nav-logo" height="60">
+              class="nav-logo" height="40">
             <img
               src="../assets/images/logo/logo-mini.png"
               alt="karman-logo"
-              class="nav-logo-small" height="60">
+              class="nav-logo-small" height="40">
           </slot>
 
         </router-link></h1>
 
         <!-- nav -->
         <ul class="nav">
-          <li class="nav-item nav-algolia-search" v-show="isComponentPage">
-            <algolia-search></algolia-search>
-          </li>
+
           <li class="nav-item" >
             <router-link
               active-class="active"
@@ -385,7 +378,7 @@
 </template>
 <script>
   import ThemePicker from './theme-picker.vue';
-  import AlgoliaSearch from './search.vue';
+
   import compoLang from '../i18n/component.json';
   import Karman from 'main/index.js';
   import themeLoader from './theme/loader';
@@ -403,10 +396,7 @@
         verDropdownVisible: true,
         langDropdownVisible: true,
         langs: {
-          'zh-CN': '中文',
-          'en-US': 'English',
-          'es': 'Español',
-          'fr-FR': 'Français'
+          'zh-CN': '中文'
         }
       };
     },
@@ -414,8 +404,7 @@
     mixins: [themeLoader],
 
     components: {
-      ThemePicker,
-      AlgoliaSearch
+      ThemePicker
     },
 
     computed: {

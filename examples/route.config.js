@@ -6,21 +6,6 @@ const LOAD_MAP = {
     return r => require.ensure([], () =>
       r(require(`./pages/zh-CN/${name}.vue`)),
     'zh-CN');
-  },
-  'en-US': name => {
-    return r => require.ensure([], () =>
-      r(require(`./pages/en-US/${name}.vue`)),
-    'en-US');
-  },
-  'es': name => {
-    return r => require.ensure([], () =>
-      r(require(`./pages/es/${name}.vue`)),
-    'es');
-  },
-  'fr-FR': name => {
-    return r => require.ensure([], () =>
-      r(require(`./pages/fr-FR/${name}.vue`)),
-    'fr-FR');
   }
 };
 
@@ -33,21 +18,6 @@ const LOAD_DOCS_MAP = {
     return r => require.ensure([], () =>
       r(require(`./docs/zh-CN${path}.md`)),
     'zh-CN');
-  },
-  'en-US': path => {
-    return r => require.ensure([], () =>
-      r(require(`./docs/en-US${path}.md`)),
-    'en-US');
-  },
-  'es': path => {
-    return r => require.ensure([], () =>
-      r(require(`./docs/es${path}.md`)),
-    'es');
-  },
-  'fr-FR': path => {
-    return r => require.ensure([], () =>
-      r(require(`./docs/fr-FR${path}.md`)),
-    'fr-FR');
   }
 };
 
@@ -168,14 +138,10 @@ route.push({
   component: require('./play/index.vue')
 });
 
-let userLanguage = localStorage.getItem('KUI_LANGUAGE') || window.navigator.language || 'en-US';
-let defaultPath = '/en-US';
+let userLanguage = localStorage.getItem('KUI_LANGUAGE') || window.navigator.language || 'zh-CN';
+let defaultPath = '/zh-CN';
 if (userLanguage.indexOf('zh-') !== -1) {
   defaultPath = '/zh-CN';
-} else if (userLanguage.indexOf('es') !== -1) {
-  defaultPath = '/es';
-} else if (userLanguage.indexOf('fr') !== -1) {
-  defaultPath = '/fr-FR';
 }
 
 route = route.concat([{

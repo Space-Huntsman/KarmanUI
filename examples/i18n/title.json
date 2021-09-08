@@ -2,17 +2,5 @@
   "zh-CN": {
     "home": "Karman - 网站快速成型工具",
     "component": "组件 | Karman"
-  },
-  "en-US": {
-    "home": "Karman - A Desktop UI Toolkit for Web",
-    "component": "Component | Karman"
-  },
-  "es": {
-    "home": "Karman - Un kit de interfaz de usuario para la web",
-    "component": "Componentes | Karman"
-  },
-  "fr-FR": {
-    "home": "Karman - Un kit de composants d'interface pour le web",
-    "component": "Composants | Karman"
   }
 }

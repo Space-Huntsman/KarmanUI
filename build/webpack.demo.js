@@ -104,7 +104,7 @@ const webpackConfig = {
     new HtmlWebpackPlugin({
       template: './examples/index.tpl',
       filename: './index.html',
-      favicon: './examples/favicon.ico'
+      favicon: './examples/assets/images/logo/logo-mini.png'
     }),
     new CopyWebpackPlugin([
       { from: 'examples/versions.json' }
