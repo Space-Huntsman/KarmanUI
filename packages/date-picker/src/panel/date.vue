@@ -21,7 +21,7 @@
           <div class="kui-date-picker__time-header" v-if="showTime">
             <span class="kui-date-picker__editor-wrap">
               <kui-input
-                :placeholder="t('el.datepicker.selectDate')"
+                :placeholder="t('lang.datepicker.selectDate')"
                 :value="visibleDate"
                 size="small"
                 @input="val => userInputDate = val"
@@ -31,7 +31,7 @@
               <kui-input
                 ref="input"
                 @focus="timePickerVisible = true"
-                :placeholder="t('el.datepicker.selectTime')"
+                :placeholder="t('lang.datepicker.selectTime')"
                 :value="visibleTime"
                 size="small"
                 @input="val => userInputTime = val"
@@ -128,14 +128,14 @@
           class="kui-picker-panel__link-btn"
           @click="changeToNow"
           v-show="selectionMode !== 'dates'">
-          {{ t('el.datepicker.now') }}
+          {{ t('lang.datepicker.now') }}
         </kui-button>
         <kui-button
           plain
           size="mini"
           class="kui-picker-panel__link-btn"
           @click="confirm">
-          {{ t('el.datepicker.confirm') }}
+          {{ t('lang.datepicker.confirm') }}
         </kui-button>
       </div>
     </div>
@@ -566,7 +566,7 @@
       },
 
       yearLabel() {
-        const yearTranslation = this.t('el.datepicker.year');
+        const yearTranslation = this.t('lang.datepicker.year');
         if (this.currentView === 'year') {
           const startYear = Math.floor(this.year / 10) * 10;
           if (yearTranslation) {

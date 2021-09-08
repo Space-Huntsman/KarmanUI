@@ -79,6 +79,9 @@
       &::after {
         clear: both;
       }
+      & &-component-search{
+        width: 300px;
+      }
     }
 
     .nav-gap {
@@ -293,11 +296,15 @@
               class="nav-logo-small" height="40">
           </slot>
 
-        </router-link></h1>
+        </router-link>
+
+        </h1>
 
         <!-- nav -->
         <ul class="nav">
-
+          <li class="nav-item nav-component-search" v-show="isComponentPage">
+            <component-search></component-search>
+          </li>
           <li class="nav-item" >
             <router-link
               active-class="active"
@@ -384,7 +391,7 @@
   import themeLoader from './theme/loader';
   import bus from '../bus';
   import { ACTION_USER_CONFIG_UPDATE } from './theme/constant.js';
-
+  import ComponentSearch from './search.vue';
   const { version } = Karman;
 
   export default {
@@ -404,7 +411,8 @@
     mixins: [themeLoader],
 
     components: {
-      ThemePicker
+      ThemePicker,
+      ComponentSearch
     },
 
     computed: {

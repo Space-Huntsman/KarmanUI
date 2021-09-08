@@ -24,7 +24,7 @@
           type="text"
           class="kui-color-dropdown__link-btn"
           @click="$emit('clear')">
-          {{ t('el.colorpicker.clear') }}
+          {{ t('lang.colorpicker.clear') }}
         </kui-button> -->
         <kui-button
           plain
@@ -32,7 +32,7 @@
           type="primary"
           class="kui-color-dropdown__btn"
           @click="confirmValue">
-          {{ t('el.colorpicker.confirm') }}
+          {{ t('lang.colorpicker.confirm') }}
         </kui-button>
       </div>
       <color-list

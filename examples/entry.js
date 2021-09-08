@@ -13,11 +13,12 @@ import title from './i18n/title';
 
 import 'theme/default/src/index.scss';
 import './demo-styles/index.scss';
-import './assets/styles/common.css';
+import './assets/styles/common.scss';
 import './assets/styles/fonts/style.css';
 import icon from './icon.json';
+import locale from '/src/locale/lang/zh-CN';
 
-Vue.use(Karman);
+Vue.use(Karman, { locale });
 Vue.use(VueRouter);
 Vue.component('demo-block', demoBlock);
 Vue.component('main-footer', MainFooter);

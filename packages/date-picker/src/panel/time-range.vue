@@ -8,7 +8,7 @@
       :class="popperClass">
       <div class="kui-time-range-picker__content">
         <div class="kui-time-range-picker__cell">
-          <div class="kui-time-range-picker__header">{{ t('el.datepicker.startTime') }}</div>
+          <div class="kui-time-range-picker__header">{{ t('lang.datepicker.startTime') }}</div>
           <div
             :class="{ 'has-seconds': showSeconds, 'is-arrow': arrowControl }"
             class="kui-time-range-picker__body kui-time-panel__content">
@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="kui-time-range-picker__cell">
-          <div class="kui-time-range-picker__header">{{ t('el.datepicker.endTime') }}</div>
+          <div class="kui-time-range-picker__header">{{ t('lang.datepicker.endTime') }}</div>
           <div
             :class="{ 'has-seconds': showSeconds, 'is-arrow': arrowControl }"
             class="kui-time-range-picker__body kui-time-panel__content">
@@ -44,12 +44,12 @@
         <button
           type="button"
           class="kui-time-panel__btn cancel"
-          @click="handleCancel()">{{ t('el.datepicker.cancel') }}</button>
+          @click="handleCancel()">{{ t('lang.datepicker.cancel') }}</button>
         <button
           type="button"
           class="kui-time-panel__btn confirm"
           @click="handleConfirm()"
-          :disabled="btnDisabled">{{ t('el.datepicker.confirm') }}</button>
+          :disabled="btnDisabled">{{ t('lang.datepicker.confirm') }}</button>
       </div>
     </div>
   </transition>

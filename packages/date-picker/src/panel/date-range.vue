@@ -25,7 +25,7 @@
                   size="small"
                   :disabled="rangeState.selecting"
                   ref="minInput"
-                  :placeholder="t('el.datepicker.startDate')"
+                  :placeholder="t('lang.datepicker.startDate')"
                   class="kui-date-range-picker__editor"
                   :value="minVisibleDate"
                   @input="val => handleDateInput(val, 'min')"
@@ -36,7 +36,7 @@
                   size="small"
                   class="kui-date-range-picker__editor"
                   :disabled="rangeState.selecting"
-                  :placeholder="t('el.datepicker.startTime')"
+                  :placeholder="t('lang.datepicker.startTime')"
                   :value="minVisibleTime"
                   @focus="minTimePickerVisible = true"
                   @input="val => handleTimeInput(val, 'min')"
@@ -57,7 +57,7 @@
                   size="small"
                   class="kui-date-range-picker__editor"
                   :disabled="rangeState.selecting"
-                  :placeholder="t('el.datepicker.endDate')"
+                  :placeholder="t('lang.datepicker.endDate')"
                   :value="maxVisibleDate"
                   :readonly="!minDate"
                   @input="val => handleDateInput(val, 'max')"
@@ -68,7 +68,7 @@
                   size="small"
                   class="kui-date-range-picker__editor"
                   :disabled="rangeState.selecting"
-                  :placeholder="t('el.datepicker.endTime')"
+                  :placeholder="t('lang.datepicker.endTime')"
                   :value="maxVisibleTime"
                   :readonly="!minDate"
                   @focus="minDate && (maxTimePickerVisible = true)"
@@ -172,7 +172,7 @@
           type="text"
           class="kui-picker-panel__link-btn"
           @click="handleClear">
-          {{ t('el.datepicker.clear') }}
+          {{ t('lang.datepicker.clear') }}
         </kui-button>
         <kui-button
           plain
@@ -180,7 +180,7 @@
           class="kui-picker-panel__link-btn"
           :disabled="btnDisabled"
           @click="handleConfirm(false)">
-          {{ t('el.datepicker.confirm') }}
+          {{ t('lang.datepicker.confirm') }}
         </kui-button>
       </div>
     </div>
@@ -231,11 +231,11 @@
       },
 
       leftLabel() {
-        return this.leftDate.getFullYear() + ' ' + this.t('el.datepicker.year') + ' ' + this.t(`el.datepicker.month${ this.leftDate.getMonth() + 1 }`);
+        return this.leftDate.getFullYear() + ' ' + this.t('lang.datepicker.year') + ' ' + this.t(`el.datepicker.month${ this.leftDate.getMonth() + 1 }`);
       },
 
       rightLabel() {
-        return this.rightDate.getFullYear() + ' ' + this.t('el.datepicker.year') + ' ' + this.t(`el.datepicker.month${ this.rightDate.getMonth() + 1 }`);
+        return this.rightDate.getFullYear() + ' ' + this.t('lang.datepicker.year') + ' ' + this.t(`el.datepicker.month${ this.rightDate.getMonth() + 1 }`);
       },
 
       leftYear() {

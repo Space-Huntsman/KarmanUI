@@ -124,13 +124,7 @@
       @mouseenter="isFade = false"
       :class="{ 'is-fade': isFade }"
       :style="navStyle">
-    <kui-row :gutter="50">
-      <kui-col :span="22">
 
-          <component-search></component-search>
-
-      </kui-col>
-    </kui-row>
     <ul>
       <li
           class="nav-item"
@@ -189,12 +183,8 @@
 <script>
 import bus from '../bus';
 import compoLang from '../i18n/component.json';
-import ComponentSearch from './search.vue';
 
 export default {
-  components: {
-    ComponentSearch
-  },
   props: {
     data: Array,
     base: {
@@ -224,7 +214,7 @@ export default {
       if (this.isSmallScreen) {
         style.paddingBottom = '60px';
       }
-      style.opacity = this.isFade ? '0.5' : '1';
+      style.opacity = this.isFade ? '1' : '1';
       return style;
     },
     lang() {

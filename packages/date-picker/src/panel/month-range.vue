@@ -111,11 +111,11 @@
       },
 
       leftLabel() {
-        return this.leftDate.getFullYear() + ' ' + this.t('el.datepicker.year');
+        return this.leftDate.getFullYear() + ' ' + this.t('lang.datepicker.year');
       },
 
       rightLabel() {
-        return this.rightDate.getFullYear() + ' ' + this.t('el.datepicker.year');
+        return this.rightDate.getFullYear() + ' ' + this.t('lang.datepicker.year');
       },
 
       leftYear() {

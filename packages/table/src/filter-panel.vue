@@ -18,8 +18,8 @@
       <div class="kui-table-filter__bottom">
         <button @click="handleConfirm"
           :class="{ 'is-disabled': filteredValue.length === 0 }"
-          :disabled="filteredValue.length === 0">{{ t('el.table.confirmFilter') }}</button>
-        <button @click="handleReset">{{ t('el.table.resetFilter') }}</button>
+          :disabled="filteredValue.length === 0">{{ t('lang.table.confirmFilter') }}</button>
+        <button @click="handleReset">{{ t('lang.table.resetFilter') }}</button>
       </div>
     </div>
     <div
@@ -30,7 +30,7 @@
       <ul class="kui-table-filter__list">
         <li class="kui-table-filter__list-item"
             :class="{ 'is-active': filterValue === undefined || filterValue === null }"
-            @click="handleSelect(null)">{{ t('el.table.clearFilter') }}</li>
+            @click="handleSelect(null)">{{ t('lang.table.clearFilter') }}</li>
         <li class="kui-table-filter__list-item"
             v-for="filter in filters"
             :label="filter.value"

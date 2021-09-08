@@ -1,5 +1,5 @@
 export default {
-  el: {
+  lang: {
     colorpicker: {
       confirm: 'جەزملەش',
       clear: 'قۇرۇقداش'

@@ -202,14 +202,14 @@
 
       emptyText() {
         if (this.loading) {
-          return this.loadingText || this.t('el.select.loading');
+          return this.loadingText || this.t('lang.select.loading');
         } else {
           if (this.remote && this.query === '' && this.options.length === 0) return false;
           if (this.filterable && this.query && this.options.length > 0 && this.filteredOptionsCount === 0) {
-            return this.noMatchText || this.t('el.select.noMatch');
+            return this.noMatchText || this.t('lang.select.noMatch');
           }
           if (this.options.length === 0) {
-            return this.noDataText || this.t('el.select.noData');
+            return this.noDataText || this.t('lang.select.noData');
           }
         }
         return null;
@@ -235,7 +235,7 @@
           : 'small';
       },
       propPlaceholder() {
-        return typeof this.placeholder !== 'undefined' ? this.placeholder : this.t('el.select.placeholder');
+        return typeof this.placeholder !== 'undefined' ? this.placeholder : this.t('lang.select.placeholder');
       }
     },
 

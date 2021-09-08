@@ -19,12 +19,12 @@
         <button
           type="button"
           class="kui-time-panel__btn cancel"
-          @click="handleCancel">{{ t('el.datepicker.cancel') }}</button>
+          @click="handleCancel">{{ t('lang.datepicker.cancel') }}</button>
         <button
           type="button"
           class="kui-time-panel__btn"
           :class="{confirm: !disabled}"
-          @click="handleConfirm()">{{ t('el.datepicker.confirm') }}</button>
+          @click="handleConfirm()">{{ t('lang.datepicker.confirm') }}</button>
       </div>
     </div>
   </transition>

@@ -181,7 +181,7 @@ export default {
                 this.pageSizes.map(item =>
                   <kui-option
                     value={ item }
-                    label={ item + this.t('el.pagination.pagesize') }>
+                    label={ item + this.t('lang.pagination.pagesize') }>
                   </kui-option>
                 )
               }
@@ -246,7 +246,7 @@ export default {
       render(h) {
         return (
           <span class="kui-pagination__jump">
-            { this.t('el.pagination.goto') }
+            { this.t('lang.pagination.goto') }
             <kui-input
               class="kui-pagination__editor is-in-pagination"
               min={ 1 }
@@ -257,7 +257,7 @@ export default {
               nativeOnKeyup={ this.handleKeyup }
               onInput={ this.handleInput }
               onChange={ this.handleChange }/>
-            { this.t('el.pagination.pageClassifier') }
+            { this.t('lang.pagination.pageClassifier') }
           </span>
         );
       }
@@ -269,7 +269,7 @@ export default {
       render(h) {
         return (
           typeof this.$parent.total === 'number'
-            ? <span class="kui-pagination__total">{ this.t('el.pagination.total', { total: this.$parent.total }) }</span>
+            ? <span class="kui-pagination__total">{ this.t('lang.pagination.total', { total: this.$parent.total }) }</span>
             : ''
         );
       }

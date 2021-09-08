@@ -344,7 +344,7 @@ $--alert-icon-large-size: 28px !default;
 /// color||Color|0
 $--messagebox-title-color: $--color-text-primary !default;
 $--msgbox-width: 420px !default;
-$--msgbox-border-radius: 4px !default;
+$--msgbox-border-radius: 0px !default;
 /// fontSize||Font|1
 $--messagebox-font-size: $--font-size-large !default;
 /// fontSize||Font|1
@@ -390,7 +390,7 @@ $--message-danger-font-color: $--color-danger !default;
 $--notification-width: 330px !default;
 /// padding||Spacing|3
 $--notification-padding: 14px 26px 14px 13px !default;
-$--notification-radius: 8px !default;
+$--notification-radius: 0px !default;
 $--notification-shadow: $--box-shadow-light !default;
 /// color||Color|0
 $--notification-border-color: $--border-color-lighter !default;
@@ -751,7 +751,7 @@ $--badge-size: 18px !default;
 --------------------------*/
 /// color||Color|0
 $--card-border-color: $--border-color-lighter !default;
-$--card-border-radius: 4px !default;
+$--card-border-radius: 0px !default;
 /// padding||Spacing|3
 $--card-padding: 20px !default;
 

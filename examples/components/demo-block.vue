@@ -44,8 +44,8 @@
 
 <style lang="scss">
   .demo-block {
-    border: solid 1px #ebebeb;
-    border-radius: 3px;
+    border: solid 1px rgba(51, 102, 255, 0.31);
+    border-radius: 0px;
     transition: .2s;
 
     &.hover {
@@ -76,7 +76,7 @@
       padding: 20px;
       box-sizing: border-box;
       border: solid 1px #ebebeb;
-      border-radius: 3px;
+      border-radius: 0px;
       font-size: 14px;
       line-height: 22px;
       color: #666;
@@ -96,7 +96,7 @@
         display: inline-block;
         padding: 1px 5px;
         font-size: 12px;
-        border-radius: 3px;
+        border-radius: 0px;
         height: 18px;
         line-height: 18px;
       }
@@ -124,8 +124,8 @@
       height: 44px;
       box-sizing: border-box;
       background-color: #fff;
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
       text-align: center;
       margin-top: -1px;
       color: #d3dce6;

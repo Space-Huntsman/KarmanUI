@@ -1,5 +1,5 @@
 export default {
-  el: {
+  lang: {
     colorpicker: {
       confirm: 'உறுதி செய்',
       clear: 'தெளிவாக்கு'

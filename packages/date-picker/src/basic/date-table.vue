@@ -8,8 +8,8 @@
     :class="{ 'is-week-mode': selectionMode === 'week' }">
     <tbody>
     <tr>
-      <th v-if="showWeekNumber">{{ t('el.datepicker.week') }}</th>
-      <th v-for="(week, key) in WEEKS" :key="key">{{ t('el.datepicker.weeks.' + week) }}</th>
+      <th v-if="showWeekNumber">{{ t('lang.datepicker.week') }}</th>
+      <th v-for="(week, key) in WEEKS" :key="key">{{ t('lang.datepicker.weeks.' + week) }}</th>
     </tr>
     <tr
       class="kui-date-table__row"

@@ -1,5 +1,5 @@
 export default {
-  el: {
+  lang: {
     colorpicker: {
       confirm: 'Қабылдау',
       clear: 'Тазалау'

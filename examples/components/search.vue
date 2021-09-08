@@ -2,6 +2,7 @@
   <kui-autocomplete
       v-model="query"
       size="small"
+      class="compoent-search-el"
       prefix-icon="kui-icon-search"
       :popper-class="`compoent-search${ isEmpty ? ' is-empty' : '' }`"
       :fetch-suggestions="querySearch"
@@ -36,10 +37,16 @@
   </kui-autocomplete>
 </template>
 
-<style lang="scss">
+<style lang="scss" >
+
 .compoent-search {
   width: 450px !important;
-
+  &-el{
+    width: 450px!important;
+    & input{
+      border-width:  0 0 1px 0;
+    }
+  }
   &.is-empty {
     .kui-autocomplete-suggestion__list {
       padding-bottom: 0;

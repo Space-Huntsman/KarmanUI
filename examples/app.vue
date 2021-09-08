@@ -9,18 +9,18 @@
 </template>
 
 <script>
-  import { use } from 'main/locale';
-  import zhLocale from 'main/locale/lang/zh-CN';
+  // import { use } from 'main/locale';
+  // import zhLocale from 'main/locale/lang/zh-CN';
 
-  const lang = location.hash.replace('#', '').split('/')[1] || 'zh-CN';
-  const localize = lang => {
-    switch (lang) {
-      case 'zh-CN':
-        use(zhLocale);
-        break;
-    }
-  };
-  localize(lang);
+  // const lang = location.hash.replace('#', '').split('/')[1] || 'zh-CN';
+  // const localize = lang => {
+  //   switch (lang) {
+  //     case 'zh-CN':
+  //       use(zhLocale);
+  //       break;
+  //   }
+  // };
+  // localize(lang);
 
   export default {
     name: 'app',

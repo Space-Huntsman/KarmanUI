@@ -70,7 +70,7 @@
       emptyText: {
         type: String,
         default() {
-          return t('el.tree.emptyText');
+          return t('lang.tree.emptyText');
         }
       },
       renderAfterExpand: {
