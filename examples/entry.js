@@ -10,7 +10,7 @@ import MainHeader from './components/header';
 import SideNav from './components/side-nav';
 import FooterNav from './components/footer-nav';
 import title from './i18n/title';
-
+import 'animate.css';
 import 'theme/default/src/index.scss';
 import './demo-styles/index.scss';
 import './assets/styles/common.scss';

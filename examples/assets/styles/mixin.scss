@@ -1,6 +1,62 @@
-@mixin calcWidth($width,$type:width) {
-  #{$type}:calc(#{$width / 1920} * 100vw);
+@mixin calcVw($width,$type:width) {
+  #{$type}: calc(#{$width / 1920} * 100vw);
 }
-@mixin calcHeight($height,$type:height) {
-  #{$type}:calc(#{$height / 1080} * 100vh);
+
+@mixin calcVh($height,$type:height) {
+  #{$type}: calc(#{$height / 1080} * 100vh);
+}
+
+@mixin calcVwh($width,$height,$type:background-size) {
+  #{$type}: calc(#{$width / 1920} * 100vw) calc(#{$height / 1080} * 100vh);
+}
+
+@mixin createAnimateSpeed($count) {
+  $time : $count * 0.5;
+  .animate__animated.animate__delay-#{$time*10}ss {
+    animation-delay: calc(1s *  #{$time});
+  }
+}
+@for $count from 1 through 30{
+ @include createAnimateSpeed($count);
+}
+@mixin createAnimateDuration($count) {
+  $time : $count * 0.5;
+  .animate__animated.animate__duration-#{$time*10}ss {
+    animation-duration: calc(1s * #{$time});
+  }
+}
+@for $count from 1 through 30{
+ @include createAnimateDuration($count);
+}
+.animate__animated.animate__linear{
+  animation-timing-function: linear;
+}
+.animate__shakeLinear {
+  animation-timing-function: linear;
+  animation-name: shakeLinear;
+}
+@-webkit-keyframes shakeLinear {
+  0% {
+    transform: translateX(0);
+  }
+
+  13% {
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  37% {
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  63% {
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  87% {
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }

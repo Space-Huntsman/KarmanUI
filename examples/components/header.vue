@@ -317,6 +317,12 @@
               :to="`/${ lang }/component`">{{ langConfig.components }}
             </router-link>
           </li>
+          <li class="nav-item">
+            <kui-link
+              active-class="active"
+              href="https://github.com/Space-Huntsman" target="_blank"><i class="kui-icon-github"/> Git 仓库
+            </kui-link>
+          </li>
           <li v-if="false"
             class="nav-item nav-item-theme"
           >
