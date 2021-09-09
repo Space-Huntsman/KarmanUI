@@ -4,7 +4,7 @@
 
             <kui-row class="header-row  animate__animated   animate__fadeInLeft	" justify="space-around">
                 <kui-col :span="6" class="logo-mini">
-                    <img width="45" src="examples/assets/images/logo/logo-rect.png"/>
+                    <img width="35" src="examples/assets/images/logo/logo-rect.png"/>
                 </kui-col>
                 <kui-col :span="18" class="nav-items">
                     <kui-link type="primary">首页</kui-link>
@@ -36,7 +36,7 @@
         <div class="space-mask" v-if="animateStatus">
         </div>
 
-        <div v-if="animateStatus===1||animateStatus===0" class="space animate__animated animate__duration-5ss">
+        <div v-if="animateStatus===1||animateStatus===0" class="space animate__animated animate__duration-20ss">
             <template v-if="animateStatus===1">
                 <div class="space-stars animate__animated  animate__flash animate__infinite animate__duration-150ss"></div>
 
@@ -82,11 +82,11 @@
       z-index: 4;
       left: 0;
       top: 0;
-      padding: 48px 0 0 54px;
+      padding: 20px 0 0 54px;
       width: 400px;
 
       & .logo-mini {
-        max-width: 80px;
+        max-width: 70px;
 
         & > img {
           border-radius: 8px;
@@ -109,7 +109,7 @@
       position: absolute;
       z-index: 4;
       left: 54px;
-      top: 32%;
+      top: 28%;
 
       .slogen {
         background-image: url("~examples/assets/images/home/slogen.png");
@@ -132,7 +132,7 @@
       }
 
       & > .button {
-        margin-top: 51px;
+        margin-top: 61px;
         width: 400px;
 
         .kui-button {
@@ -201,10 +201,10 @@
         z-index: 4;
         right: 0;
         top: 0;
-        @include calcVw(707);
-        @include calcVw(222, right);
-        @include calcVh(496);
-        @include calcVh(435, top);
+        @include calcVw(707*0.9);
+        @include calcVw(222*0.9, right);
+        @include calcVh(496*0.9);
+        @include calcVh(435*1.1, top);
       }
 
       & .space-rocket {
