@@ -59,7 +59,7 @@
              class="space-red-star space-blue-star animate__animated animate__delay-35ss animate__bounceInDown "></div>
         <div v-if="animateStatus===2"
              class="space-red-star space-blue-star animate__animated animate__duration-150ss  animate__shakeY animate__infinite  "></div>
-        <div class="space-bottom-hole  animate__animated animate__delay-20ss animate__rotateInDownLeft"
+        <div class="space-bottom-hole  animate__animated animate__delay-20ss animate__fadeInUpBig"
              v-if="animateStatus===1"></div>
         <div class="space-bottom-hole  animate__animated animate__duration-120ss  animate__pulse animate__infinite"
              v-if="animateStatus===2"></div>

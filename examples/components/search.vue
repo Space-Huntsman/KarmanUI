@@ -11,25 +11,12 @@
       @select="handleSelect"
       highlight-first-item>
     <template slot-scope="props">
-      <p class="compoent-search-title" v-if="props.item.title">
-        <span v-html="props.item.highlightedCompo"></span>
+      <kui-row class="compoent-search-title" v-if="props.item.title">
+        <span v-html="props.item.name"></span>
         <span class="compoent-search-separator"></span>
         <span v-html="props.item.title"></span>
-      </p>
-      <p
-          class="compoent-search-content"
-          v-if="props.item.content"
-          v-html="props.item.content"></p>
-      <a
-          class="compoent-search-link"
-          v-if="props.item.img"
-          target="_blank"
-          href="https://www.algolia.com/docsearch">
-        <img
-            class="compoent-search-logo"
-            src="../assets/images/search-by-algolia.svg"
-            alt="compoent-logo">
-      </a>
+
+      </kui-row>
       <p
           class="compoent-search-empty"
           v-if="props.item.isEmpty">无匹配结果</p>
@@ -37,16 +24,19 @@
   </kui-autocomplete>
 </template>
 
-<style lang="scss" >
+<style lang="scss">
 
 .compoent-search {
   width: 450px !important;
-  &-el{
-    width: 450px!important;
-    & input{
-      border-width:  0 0 1px 0;
+
+  &-el {
+    width: 450px !important;
+
+    & input {
+      border-width: 0 0 1px 0;
     }
   }
+
   &.is-empty {
     .kui-autocomplete-suggestion__list {
       padding-bottom: 0;
@@ -72,9 +62,9 @@
   }
 
   .compoent-search-title {
-    font-size: 14px;
+    font-size: 16px;
     margin: 6px 0;
-    line-height: 1.8;
+    line-height: 30px;
   }
 
   .compoent-search-separator {
@@ -122,13 +112,15 @@
 </style>
 
 <script>
+import navConfig from 'examples/nav.config.json';
 
 export default {
   data() {
     return {
       index: null,
       query: '',
-      isEmpty: false
+      isEmpty: false,
+      navs: []
     };
   },
 
@@ -156,11 +148,35 @@ export default {
 
     querySearch(query, cb) {
       if (!query) return;
-      // anchor: hit.anchor,
-      //     component: hit.component,
-      //     highlightedCompo: hit._highlightResult.component.value,
-      //     title: hit._highlightResult.title.value,
-      //     content
+      let reg = new RegExp(`${query}`, 'gi');
+      let res = JSON.parse(JSON.stringify(this.navs.filter(item => (reg.test(item.component) || reg.test(item.title)))));
+      let replaceHit = (str) => {
+        // eslint-disable-next-line no-undef
+        return Array.from(new Set(str.match(reg))).map(item => {
+          console.log('-----------', item);
+          return str.replace(reg, `<b style="color: #FFFFFF;background-color: #3366ff">${item}</b>`);
+        }).join();
+      };
+      if (res.length > 0) {
+        this.isEmpty = false;
+
+        cb(res.map(hit => {
+          hit.name = replaceHit(hit.component);
+          hit.component = hit.component;
+          hit.title = replaceHit(hit.title);
+          return {
+            ...hit
+          };
+        }));
+        // anchor: hit.anchor,
+        //     component: hit.component,
+        //     highlightedCompo: hit._highlightResult.component.value,
+        //     title: hit._highlightResult.title.value,
+        //     content
+      } else {
+        cb([{isEmpty: true}]);
+      }
+
     },
 
     handleSelect(val) {
@@ -172,6 +188,37 @@ export default {
   },
 
   mounted() {
+    if (navConfig[this.lang]) {
+      let createInfo = (component) => {
+        let name = component.path.replace(/\//g, '');
+        return {
+          component: name,
+          title: component.name || component.title
+        };
+      };
+
+      this.navs = [];
+      navConfig[this.lang].map(item => {
+        if (item.hasOwnProperty('children')) {
+          return item.children.map(component => {
+            this.navs.push(createInfo(component));
+          });
+
+        }
+        if (item.hasOwnProperty('groups')) {
+          return item.groups.map(group => {
+            if (group.hasOwnProperty('list')) {
+              return group.list.map(component => {
+                this.navs.push(createInfo(component));
+              });
+            }
+            return [];
+          });
+        } else {
+          this.navs.push(createInfo(item));
+        }
+      });
+    }
   }
 };
 </script>
