@@ -4,14 +4,16 @@
 
             <kui-row class="header-row  animate__animated   animate__fadeInLeft	" justify="space-around">
                 <kui-col :span="6" class="logo-mini">
-                    <img width="35" src="examples/assets/images/logo/logo-rect.png"/>
+                    <img width="35" :src="logoUrl"/>
                 </kui-col>
                 <kui-col :span="18" class="nav-items">
                     <kui-link type="primary">首页</kui-link>
                     <kui-divider direction="vertical"></kui-divider>
                     <kui-link :href="`/#/${ lang }/component`">组件</kui-link>
                     <kui-divider direction="vertical"></kui-divider>
-                    <kui-link @click="pathTo('https://github.com/Space-Huntsman/KarmanUI',true)" ><i class="kui-icon-github"/> Git 仓库</kui-link>
+                    <kui-link @click="pathTo('https://github.com/Space-Huntsman/KarmanUI',true)"><i
+                                class="kui-icon-github"/> Git 仓库
+                    </kui-link>
                 </kui-col>
             </kui-row>
         </header>
@@ -27,13 +29,15 @@
                     </kui-button>
                 </kui-col>
                 <kui-col :span="12">
-                    <kui-button class="button-git" icon="kui-icon-github" @click="pathTo('https://github.com/Space-Huntsman/KarmanUI',true)" round plain>Git仓库</kui-button>
+                    <kui-button class="button-git" icon="kui-icon-github"
+                                @click="pathTo('https://github.com/Space-Huntsman/KarmanUI',true)" round plain>Git仓库
+                    </kui-button>
                 </kui-col>
             </kui-row>
         </div>
 
 
-        <div class="space-mask" v-if="animateStatus">
+        <div class="space-mask   animate__animated  animate__delay-10ss animate__fadeIn animate__duration-30ss" v-if="animateStatus">
         </div>
 
         <div v-if="animateStatus===1||animateStatus===0" class="space animate__animated animate__duration-20ss">
@@ -99,7 +103,7 @@
 
         & .kui-link {
           padding: 0 20px;
-          font-size:16px ;
+          font-size: 16px;
         }
       ;
       }
@@ -140,15 +144,18 @@
 
           &.button-start {
             box-shadow: 0px 8px 20px 0px rgba(51, 102, 255, 0.47);
-            &:hover{
+
+            &:hover {
               box-shadow: 0px 12px 20px 0px rgba(51, 102, 255, 0.47);
 
             }
 
           }
+
           &.button-git {
             border-color: #000000;
-            &:hover{
+
+            &:hover {
               border-color: #3366FF;
             }
           }
@@ -309,29 +316,36 @@
         lang: this.$route.meta.lang,
         mainImgOffset: 0,
         animateStatus: 0,
+        logoUrl: require('examples/assets/images/logo/logo-rect.png'),
         loadImages: [
-          'examples/assets/images/home/slogen.png',
-          'examples/assets/images/home/space-blue-star.png',
-          'examples/assets/images/home/space-bottom-hole.png',
-          'examples/assets/images/home/space-mask.png',
-          'examples/assets/images/home/space-red-star.png',
-          'examples/assets/images/home/space-rocket.png',
-          'examples/assets/images/home/space-satellite.png',
-          'examples/assets/images/home/space-stars.png'
+          require('examples/assets/images/home/slogen.png'),
+          require('examples/assets/images/home/space-blue-star.png'),
+          require('examples/assets/images/home/space-bottom-hole.png'),
+          require('examples/assets/images/home/space-mask.png'),
+          require('examples/assets/images/home/space-red-star.png'),
+          require('examples/assets/images/home/space-rocket.png'),
+          require('examples/assets/images/home/space-satellite.png'),
+          require('examples/assets/images/home/space-stars.png')
         ]
       };
     },
     beforeDestroy() {
     },
     mounted() {
+      this.animateStatus = 1;
+      setTimeout(() => {
+        this.animateStatus = 2;
+      }, 4000);
       let loadImageCount = 0;
       let loadImageCallBack = () => {
         loadImageCount++;
         if (loadImageCount === this.loadImages.length) {
-          this.animateStatus = 1;
           setTimeout(() => {
-            this.animateStatus = 2;
-          }, 4000);
+            this.animateStatus = 1;
+            setTimeout(() => {
+              this.animateStatus = 2;
+            }, 4000);
+          }, 1000);
         }
       };
       this.loadImages.forEach(url => {
