@@ -27,7 +27,7 @@
                     </kui-button>
                 </kui-col>
                 <kui-col :span="12">
-                    <kui-button icon="kui-icon-github" @click="pathTo('https://github.com/Space-Huntsman/KarmanUI',true)" round plain>Git仓库</kui-button>
+                    <kui-button class="button-git" icon="kui-icon-github" @click="pathTo('https://github.com/Space-Huntsman/KarmanUI',true)" round plain>Git仓库</kui-button>
                 </kui-col>
             </kui-row>
         </div>
@@ -90,7 +90,6 @@
 
         & > img {
           border-radius: 8px;
-          border: 1px solid #3366FF;
           overflow: hidden;
         }
       }
@@ -100,6 +99,7 @@
 
         & .kui-link {
           padding: 0 20px;
+          font-size:16px ;
         }
       ;
       }
@@ -113,10 +113,10 @@
 
       .slogen {
         background-image: url("~examples/assets/images/home/slogen.png");
-        background-size: cover;
+        background-size: 100% 100%;
         display: block;
-        width: 403px;
-        height: 64px;
+        @include calcVw(548);
+        @include calcVh(101);
       }
 
       & > .intro {
@@ -133,13 +133,24 @@
 
       & > .button {
         margin-top: 61px;
-        width: 400px;
+        width: 350px;
 
         .kui-button {
           width: 100%;
 
           &.button-start {
             box-shadow: 0px 8px 20px 0px rgba(51, 102, 255, 0.47);
+            &:hover{
+              box-shadow: 0px 12px 20px 0px rgba(51, 102, 255, 0.47);
+
+            }
+
+          }
+          &.button-git {
+            border-color: #000000;
+            &:hover{
+              border-color: #3366FF;
+            }
           }
         }
       }
@@ -155,7 +166,6 @@
       right: 0;
       width: 100%;
       top: 0;
-      //display: none;
     }
 
     & .space {
@@ -167,7 +177,7 @@
           background-position: 200% 0;
         }
       }
-      border: 2px solid #3366FF;
+
       background-image: linear-gradient(65deg, #9e195b 0%, #9e195b 20%, #29235c 60%, #9e195b 90%, #9e195b 100%);
       position: absolute;
       background-size: 200% 200%;
@@ -214,9 +224,9 @@
         position: absolute;
         z-index: 2;
         @include calcVw(453);
-        @include calcVw(702, right);
+        @include calcVw(572, right);
         @include calcVh(540);
-        @include calcVh(108, top);
+        @include calcVh(78, top);
       }
 
       & .space-blue-star {
@@ -228,9 +238,9 @@
         right: 0;
         top: 0;
         @include calcVw(91);
-        @include calcVw(524, right);
+        @include calcVw(445, right);
         @include calcVh(91);
-        @include calcVh(206, top);
+        @include calcVh(258, top);
       }
 
       & .space-satellite {
@@ -241,10 +251,10 @@
         z-index: 2;
         right: 0;
         top: 0;
-        @include calcVw(364);
-        @include calcVw(55, right);
-        @include calcVh(359);
-        @include calcVh(34, top);
+        @include calcVw(270);
+        @include calcVw(66, right);
+        @include calcVh(266);
+        @include calcVh(93, top);
       }
     }
 
@@ -285,7 +295,7 @@
         if (redirect) {
           window.open(path, '_blank');
         } else {
-          this.$router.push({path:`/${this.lang}/${path}`});
+          this.$router.push({path: `/${this.lang}/${path}`});
         }
       }
     },

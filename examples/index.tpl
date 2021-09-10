@@ -21,6 +21,9 @@
     <% } %>
   </body>
   <% if (process.env.NODE_ENV === 'production') { %><script>
+    var ga = function() {
+      console.log(arguments)
+    };
     ga('create', 'UA-84335471-1', 'auto');
     ga('send', 'pageview');
 
@@ -29,9 +32,5 @@
       ga('send', 'pageview');
     });
   </script><% } %>
-  <% if (process.env.NODE_ENV !== 'production') { %><script>
-    var ga = function() {
-      console.log(arguments)
-    };
-  </script><% } %>
+
 </html>
