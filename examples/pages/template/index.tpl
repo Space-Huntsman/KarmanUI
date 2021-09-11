@@ -18,7 +18,10 @@
             </kui-row>
         </header>
         <div class="content" v-if="animateStatus">
-            <span class="slogen  animate__animated  animate__delay-5ss  animate__fadeInLeft"></span>
+            <transition name="kui-fade-in-linear">
+            <span  ref="slogen" class="slogen  slogen-light  animate__animated  animate__delay-5ss  animate__fadeInLeft"></span>
+            </transition>
+            <span   class="slogen  animate__animated  animate__delay-5ss  animate__fadeInLeft"></span>
             <p class="intro  animate__animated animate__delay-10ss  animate__fadeInLeft"> 基于 Vue 2.x
                 开发的高质量桌面端UI组件库，作为首个提供航天工程类UI组件库，该组件库不仅可满足常规项目组件使用需求，同时还包含了一些航天测运控方向显示组件，目前已经可满足轨道根数、预报、星下点等显示需求。
             </p>
@@ -114,13 +117,22 @@
       z-index: 4;
       left: 54px;
       top: 28%;
-
+        padding-top:150px ;
       .slogen {
         background-image: url("~examples/assets/images/home/slogen.png");
         background-size: 100% 100%;
         display: block;
         @include calcVw(548);
         @include calcVh(101);
+        z-index: 4;
+        position: absolute;
+        top:0;
+        left:0;
+        &.slogen-light{
+          background-image: url("~examples/assets/images/home/slogen-w.png");
+          z-index: 5;
+          position: absolute;
+        }
       }
 
       & > .intro {
@@ -342,6 +354,14 @@
         if (loadImageCount === this.loadImages.length) {
           setTimeout(() => {
             this.animateStatus = 1;
+            // animate__delay-5ss  animate__fadeInLeft
+
+            setTimeout(() => {
+              this.$refs.slogen.className="slogen slogen-light animate__animated animate__fadeOut animate__duration-20ss";
+            },500)
+            setTimeout(() => {
+              this.$refs.slogen.remove();
+            },2500)
             setTimeout(() => {
               this.animateStatus = 2;
             }, 4000);
