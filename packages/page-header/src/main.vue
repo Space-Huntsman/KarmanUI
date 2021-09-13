@@ -21,7 +21,7 @@ export default {
     title: {
       type: String,
       default() {
-        return t('el.pageHeader.title');
+        return t('lang.pageHeader.title');
       }
     },
     content: String

@@ -12,19 +12,19 @@
             type="plain"
             size="mini"
             @click="selectDate('prev-month')">
-            {{ t('el.datepicker.prevMonth') }}
+            {{ t('lang.datepicker.prevMonth') }}
           </kui-button>
           <kui-button
             type="plain"
             size="mini"
             @click="selectDate('today')">
-            {{ t('el.datepicker.today') }}
+            {{ t('lang.datepicker.today') }}
           </kui-button>
           <kui-button
             type="plain"
             size="mini"
             @click="selectDate('next-month')">
-            {{ t('el.datepicker.nextMonth') }}
+            {{ t('lang.datepicker.nextMonth') }}
           </kui-button>
         </kui-button-group>
       </div>
@@ -170,7 +170,7 @@ export default {
     i18nDate() {
       const year = this.date.getFullYear();
       const month = this.date.getMonth() + 1;
-      return `${year} ${this.t('el.datepicker.year')} ${this.t('el.datepicker.month' + month)}`;
+      return `${year} ${this.t('lang.datepicker.year')} ${this.t('lang.datepicker.month' + month)}`;
     },
 
     formatedToday() {

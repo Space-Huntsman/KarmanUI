@@ -24,7 +24,7 @@
     </kui-submenu>
   </kui-submenu>
   <kui-menu-item index="3" disabled>消息中心</kui-menu-item>
-  <kui-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></kui-menu-item>
+  <kui-menu-item index="4"><a href="" target="_blank">第三方地址</a></kui-menu-item>
 </kui-menu>
 <div class="line"></div>
 <kui-menu
@@ -32,7 +32,7 @@
   class="kui-menu-demo"
   mode="horizontal"
   @select="handleSelect"
-  background-color="#545c64"
+  background-color="#678AF7"
   text-color="#fff"
   active-text-color="#ffd04b">
   <kui-menu-item index="1">处理中心</kui-menu-item>
@@ -49,7 +49,7 @@
     </kui-submenu>
   </kui-submenu>
   <kui-menu-item index="3" disabled>消息中心</kui-menu-item>
-  <kui-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></kui-menu-item>
+  <kui-menu-item index="4"><a href="" target="_blank">第三方地址</a></kui-menu-item>
 </kui-menu>
 
 <script>
@@ -107,7 +107,7 @@
         <span slot="title">导航二</span>
       </kui-menu-item>
       <kui-menu-item index="3" disabled>
-        <i class="kui-icon-document"></i>
+        <i class="kui-icon-document" ></i>
         <span slot="title">导航三</span>
       </kui-menu-item>
       <kui-menu-item index="4">
@@ -118,14 +118,14 @@
   </kui-col>
   <kui-col :span="12">
     <h5>自定义颜色</h5>
-    <kui-menu
+    <kui-menu dark
       default-active="2"
-      class="kui-menu-vertical-demo"
+      class="kui-menu-vertical-demo drak"
       @open="handleOpen"
       @close="handleClose"
-      background-color="#545c64"
+      background-color="#678AF7"
       text-color="#fff"
-      active-text-color="#ffd04b">
+      active-text-color="#F4F6FA">
       <kui-submenu index="1">
         <template slot="title">
           <i class="kui-icon-location"></i>
@@ -159,7 +159,11 @@
     </kui-menu>
   </kui-col>
 </kui-row>
-
+<style>
+    .kui-menu-vertical-demo.drak i{
+        color: #FFFFFF;
+    }
+</style>
 <script>
   export default {
     methods: {
@@ -221,6 +225,7 @@
     width: 200px;
     min-height: 400px;
   }
+
 </style>
 
 <script>

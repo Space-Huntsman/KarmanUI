@@ -79,6 +79,9 @@
       &::after {
         clear: both;
       }
+      & &-component-search{
+        width: 300px;
+      }
     }
 
     .nav-gap {
@@ -113,9 +116,6 @@
       position: relative;
       cursor: pointer;
 
-      &.nav-algolia-search {
-        cursor: default;
-      }
 
       &.lang-item,
       &:last-child {
@@ -235,9 +235,7 @@
           padding: 0 5px;
         }
       }
-      .nav-theme-switch, .nav-algolia-search {
-        display: none;
-      }
+
     }
   }
 
@@ -291,19 +289,21 @@
             <img
               src="../assets/images/logo/logo.png"
               alt="karman-logo"
-              class="nav-logo" height="60">
+              class="nav-logo" height="40">
             <img
               src="../assets/images/logo/logo-mini.png"
               alt="karman-logo"
-              class="nav-logo-small" height="60">
+              class="nav-logo-small" height="40">
           </slot>
 
-        </router-link></h1>
+        </router-link>
+
+        </h1>
 
         <!-- nav -->
         <ul class="nav">
-          <li class="nav-item nav-algolia-search" v-show="isComponentPage">
-            <algolia-search></algolia-search>
+          <li class="nav-item nav-component-search" v-show="isComponentPage">
+            <component-search></component-search>
           </li>
           <li class="nav-item" >
             <router-link
@@ -316,6 +316,12 @@
               active-class="active"
               :to="`/${ lang }/component`">{{ langConfig.components }}
             </router-link>
+          </li>
+          <li class="nav-item">
+            <kui-link
+              active-class="active"
+              href="https://github.com/Space-Huntsman" target="_blank"><i class="kui-icon-github"/> Git 仓库
+            </kui-link>
           </li>
           <li v-if="false"
             class="nav-item nav-item-theme"
@@ -385,13 +391,13 @@
 </template>
 <script>
   import ThemePicker from './theme-picker.vue';
-  import AlgoliaSearch from './search.vue';
+
   import compoLang from '../i18n/component.json';
   import Karman from 'main/index.js';
   import themeLoader from './theme/loader';
   import bus from '../bus';
   import { ACTION_USER_CONFIG_UPDATE } from './theme/constant.js';
-
+  import ComponentSearch from './search.vue';
   const { version } = Karman;
 
   export default {
@@ -403,10 +409,7 @@
         verDropdownVisible: true,
         langDropdownVisible: true,
         langs: {
-          'zh-CN': '中文',
-          'en-US': 'English',
-          'es': 'Español',
-          'fr-FR': 'Français'
+          'zh-CN': '中文'
         }
       };
     },
@@ -415,7 +418,7 @@
 
     components: {
       ThemePicker,
-      AlgoliaSearch
+      ComponentSearch
     },
 
     computed: {

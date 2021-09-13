@@ -40,10 +40,10 @@
       </kui-checkbox-group>
       <p
         class="kui-transfer-panel__empty"
-        v-show="hasNoMatch">{{ t('el.transfer.noMatch') }}</p>
+        v-show="hasNoMatch">{{ t('lang.transfer.noMatch') }}</p>
       <p
         class="kui-transfer-panel__empty"
-        v-show="data.length === 0 && !hasNoMatch">{{ t('el.transfer.noData') }}</p>
+        v-show="data.length === 0 && !hasNoMatch">{{ t('lang.transfer.noData') }}</p>
     </div>
     <p class="kui-transfer-panel__footer" v-if="hasFooter">
       <slot></slot>

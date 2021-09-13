@@ -43,14 +43,14 @@ describe('Descriptions', () => {
     vm = createVue(
       {
         template: `
-          <kui-descriptions border labkui-class-name="labkui-class-name" content-class-name="content-class-name">
+          <kui-descriptions border label-class-name="label-class-name" content-class-name="content-class-name">
             <kui-descriptions-item v-for="item in 3" :label="item" :key="item">{{ item }}</kui-descriptions-item>
           </kui-descriptions>
         `
       },
       true);
 
-    expect(Array.from(vm.$el.querySelector('.kui-descriptions-item__label').classList)).to.contain('labkui-class-name');
+    expect(Array.from(vm.$el.querySelector('.kui-descriptions-item__label').classList)).to.contain('label-class-name');
     expect(Array.from(vm.$el.querySelector('.kui-descriptions-item__content').classList)).to.contain('content-class-name');
   });
 

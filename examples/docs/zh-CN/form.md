@@ -8,7 +8,7 @@
 
 :::demo 在 Form 组件中，每一个表单域由一个 Form-Item 组件构成，表单域中可以放置各种类型的表单控件，包括 Input、Select、Checkbox、Radio、Switch、DatePicker、TimePicker
 ```html
-<kui-form ref="form" :model="form" labkui-width="80px">
+<kui-form ref="form" :model="form" label-width="80px">
   <kui-form-item label="活动名称">
     <kui-input v-model="form.name"></kui-input>
   </kui-form-item>
@@ -129,7 +129,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 
 根据具体目标和制约因素，选择最佳的标签对齐方式。
 
-:::demo 通过设置 `labkui-position` 属性可以改变表单域标签的位置，可选值为 `top`、`left`，当设为 `top` 时标签会置于表单域的顶部
+:::demo 通过设置 `label-position` 属性可以改变表单域标签的位置，可选值为 `top`、`left`，当设为 `top` 时标签会置于表单域的顶部
 ```html
 <kui-radio-group v-model="labelPosition" size="small">
   <kui-radio-button label="left">左对齐</kui-radio-button>
@@ -137,7 +137,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
   <kui-radio-button label="top">顶部对齐</kui-radio-button>
 </kui-radio-group>
 <div style="margin: 20px;"></div>
-<kui-form :labkui-position="labelPosition" labkui-width="80px" :model="formLabelAlign">
+<kui-form :label-position="labelPosition" label-width="80px" :model="formLabelAlign">
   <kui-form-item label="名称">
     <kui-input v-model="formLabelAlign.name"></kui-input>
   </kui-form-item>
@@ -171,7 +171,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 
 :::demo Form 组件提供了表单验证的功能，只需要通过 `rules` 属性传入约定的验证规则，并将 Form-Item 的 `prop` 属性设置为需校验的字段名即可。校验规则参见 [async-validator](https://github.com/yiminghe/async-validator)
 ```html
-<kui-form :model="ruleForm" :rules="rules" ref="ruleForm" labkui-width="100px" class="demo-ruleForm">
+<kui-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
   <kui-form-item label="活动名称" prop="name">
     <kui-input v-model="ruleForm.name"></kui-input>
   </kui-form-item>
@@ -285,7 +285,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 
 :::demo 本例还使用`status-icon`属性为输入框添加了表示校验结果的反馈图标。
 ```html
-<kui-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" labkui-width="100px" class="demo-ruleForm">
+<kui-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
   <kui-form-item label="密码" prop="pass">
     <kui-input type="password" v-model="ruleForm.pass" autocomplete="off"></kui-input>
   </kui-form-item>
@@ -385,7 +385,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 
 :::demo 除了在 Form 组件上一次性传递所有的验证规则外还可以在单个的表单域上传递属性的验证规则
 ```html
-<kui-form :model="dynamicValidateForm" ref="dynamicValidateForm" labkui-width="100px" class="demo-dynamic">
+<kui-form :model="dynamicValidateForm" ref="dynamicValidateForm" label-width="100px" class="demo-dynamic">
   <kui-form-item
     prop="email"
     label="邮箱"
@@ -461,7 +461,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 
 :::demo 数字类型的验证需要在 `v-model` 处加上 `.number` 的修饰符，这是 `Vue` 自身提供的用于将绑定值转化为 `number` 类型的修饰符。
 ```html
-<kui-form :model="numberValidateForm" ref="numberValidateForm" labkui-width="100px" class="demo-ruleForm">
+<kui-form :model="numberValidateForm" ref="numberValidateForm" label-width="100px" class="demo-ruleForm">
   <kui-form-item
     label="年龄"
     prop="age"
@@ -507,7 +507,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 :::
 
 :::tip
-嵌套在 `kui-form-item` 中的 `kui-form-item` 标签宽度默认为零，不会继承 `kui-form` 的 `labkui-width`。如果需要可以为其单独设置 `labkui-width` 属性。
+嵌套在 `kui-form-item` 中的 `kui-form-item` 标签宽度默认为零，不会继承 `kui-form` 的 `label-width`。如果需要可以为其单独设置 `label-width` 属性。
 :::
 
 ### 表单内组件尺寸控制
@@ -516,7 +516,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 
 :::demo 如果希望某个表单项或某个表单组件的尺寸不同于 Form 上的`size`属性，直接为这个表单项或表单组件设置自己的`size`即可。
 ```html
-<kui-form ref="form" :model="sizeForm" labkui-width="80px" size="mini">
+<kui-form ref="form" :model="sizeForm" label-width="80px" size="mini">
   <kui-form-item label="活动名称">
     <kui-input v-model="sizeForm.name"></kui-input>
   </kui-form-item>
@@ -587,9 +587,9 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 | model   | 表单数据对象 | object      |                  —                |  — |
 | rules    | 表单验证规则 | object | — | — |
 | inline    | 行内表单模式 | boolean | — | false |
-| labkui-position | 表单域标签的位置，如果值为 left 或者 right 时，则需要设置 `labkui-width` | string |  right/left/top            | right |
-| labkui-width | 表单域标签的宽度，例如 '50px'。作为 Form 直接子元素的 form-item 会继承该值。支持 `auto`。 | string | — | — |
-| labkui-suffix | 表单域标签的后缀 | string | — | — |
+| label-position | 表单域标签的位置，如果值为 left 或者 right 时，则需要设置 `label-width` | string |  right/left/top            | right |
+| label-width | 表单域标签的宽度，例如 '50px'。作为 Form 直接子元素的 form-item 会继承该值。支持 `auto`。 | string | — | — |
+| label-suffix | 表单域标签的后缀 | string | — | — |
 | hide-required-asterisk | 是否隐藏必填字段的标签旁边的红色星号 | boolean | — | false |
 | show-message  | 是否显示校验错误信息 | boolean | — | true |
 | inline-message  | 是否以行内形式展示校验信息 | boolean | — | false |
@@ -618,7 +618,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | prop    | 表单域 model 字段，在使用 validate、resetFields 方法的情况下，该属性是必填的 | string    | 传入 Form 组件的 `model` 中的字段 | — |
 | label | 标签文本 | string | — | — |
-| labkui-width | 表单域标签的的宽度，例如 '50px'。支持 `auto`。 | string |       —       | — |
+| label-width | 表单域标签的的宽度，例如 '50px'。支持 `auto`。 | string |       —       | — |
 | required | 是否必填，如不设置，则会根据校验规则自动生成 | boolean | — | false |
 | rules    | 表单验证规则 | object | — | — |
 | error    | 表单域验证错误信息, 设置该值会使表单验证状态变为`error`，并显示该错误信息 | string | — | — |

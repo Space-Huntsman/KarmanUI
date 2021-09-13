@@ -64,6 +64,7 @@
   "unpkg": "lib/index.js",
   "style": "lib/theme-default/index.css",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "async-validator": "~1.8.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.0",
     "deepmerge": "^1.2.0",

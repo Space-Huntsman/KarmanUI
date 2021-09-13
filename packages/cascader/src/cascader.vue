@@ -103,7 +103,7 @@
             </li>
           </template>
           <slot v-else name="empty">
-            <li class="kui-cascader__empty-text">{{ t('el.cascader.noMatch') }}</li>
+            <li class="kui-cascader__empty-text">{{ t('lang.cascader.noMatch') }}</li>
           </slot>
         </kui-scrollbar>
       </div>
@@ -202,7 +202,7 @@ export default {
     size: String,
     placeholder: {
       type: String,
-      default: () => t('el.cascader.placeholder')
+      default: () => t('lang.cascader.placeholder')
     },
     disabled: Boolean,
     clearable: Boolean,

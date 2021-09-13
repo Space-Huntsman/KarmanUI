@@ -22,6 +22,9 @@
     .kui-menu-vertical-demo {
       display: inline-block;
       text-align: left;
+      &.drak {
+        i{color: #FFFFFF}
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 export default {
-  el: {
+  lang: {
     colorpicker: {
       confirm: 'ตกลง',
       clear: 'ล้างข้อมูล'

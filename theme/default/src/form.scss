@@ -3,12 +3,12 @@
 @import "common/var";
 
 @include b(form) {
-  @include m(labkui-left) {
+  @include m(label-left) {
     & .kui-form-item__label {
       text-align: left;
     }
   }
-  @include m(labkui-top) {
+  @include m(label-top) {
     & .kui-form-item__label {
       float: none;
       display: inline-block;
@@ -30,7 +30,7 @@
       display: inline-block;
       vertical-align: top;
     }
-    &.kui-form--labkui-top .kui-form-item__content {
+    &.kui-form--label-top .kui-form-item__content {
       display: block;
     }
   }
@@ -96,7 +96,7 @@
     text-align: right;
     vertical-align: middle;
     float: left;
-    font-size: $--form-labkui-font-size;
+    font-size: $--form-label-font-size;
     color: $--color-text-regular;
     line-height: 40px;
     padding: 0 12px 0 0;

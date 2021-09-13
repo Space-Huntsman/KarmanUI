@@ -20,7 +20,7 @@ describe('Switch', () => {
     const core = vm.$el.querySelector('.kui-switch__core');
     expect(core.style.backgroundColor).to.equal('rgb(255, 0, 0)');
     expect(core.style.width).to.equal('100px');
-    expect(vm.$el.querySelector('.kui-switch__labkui--left').querySelector('span').textContent).to.equal('off');
+    expect(vm.$el.querySelector('.kui-switch__label--left').querySelector('span').textContent).to.equal('off');
   });
 
   it('switch with icons', () => {
@@ -29,7 +29,7 @@ describe('Switch', () => {
       inactiveIconClass: 'kui-icon-close'
     });
 
-    const icon = vm.$el.querySelector('.kui-switch__labkui--left').querySelector('i');
+    const icon = vm.$el.querySelector('.kui-switch__label--left').querySelector('i');
     expect(icon.classList.contains('kui-icon-close')).to.true;
   });
 

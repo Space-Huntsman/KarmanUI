@@ -76,7 +76,7 @@ export default {
 
     renderEmptyText(h) {
       return (
-        <div class="kui-cascader-menu__empty-text">{ this.t('el.cascader.noData') }</div>
+        <div class="kui-cascader-menu__empty-text">{ this.t('lang.cascader.noData') }</div>
       );
     },
     renderNodeList(h) {

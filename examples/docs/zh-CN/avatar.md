@@ -34,8 +34,8 @@
   export default {
     data () {
       return {
-        circleUrl: "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
-        squareUrl: "https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png",
+        circleUrl: "https://picsum.photos/200",
+        squareUrl: "https://picsum.photos/200",
         sizeList: ["large", "medium", "small"]
       }
     }
@@ -57,7 +57,7 @@
       <kui-avatar icon="kui-icon-user-solid"></kui-avatar>
     </div>
     <div>
-      <kui-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></kui-avatar>
+      <kui-avatar src="https://picsum.photos/200"></kui-avatar>
     </div>
     <div>
       <kui-avatar> user </kui-avatar>
@@ -75,8 +75,8 @@
 ```html
 <template>
   <div class="demo-type">
-    <kui-avatar :size="60" src="https://empty" @error="errorHandler">
-      <img src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png"/>
+    <kui-avatar :size="60" src="https://picsum.photos/120/120" @error="errorHandler">
+      <img src="https://picsum.photos/120"/>
     </kui-avatar>
   </div>
 </template>
@@ -112,7 +112,7 @@
     data() {
       return {
         fits: ['fill', 'contain', 'cover', 'none', 'scale-down'],
-        url: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'
+        url: 'https://picsum.photos/200'
       }
     }
   }

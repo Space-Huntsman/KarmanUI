@@ -12,12 +12,9 @@ const config = require('./config');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isPlay = !!process.env.PLAY_ENV;
-
 const webpackConfig = {
   mode: process.env.NODE_ENV,
-  entry: isProd ? {
-    docs: './examples/entry.js'
-  } : (isPlay ? './examples/play.js' : './examples/entry.js'),
+  entry: isProd ? './examples/entry.js' : (isPlay ? './examples/play.js' : './examples/entry.js'),
   output: {
     path: path.resolve(process.cwd(), './examples/karman-ui/'),
     publicPath: process.env.CI_ENV || '',
@@ -89,14 +86,37 @@ const webpackConfig = {
         ]
       },
       {
-        test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
-        // todo: 这种写法有待调整
-        query: {
+        options: {
           limit: 10000,
-          name: path.posix.join('static', '[name].[hash:7].[ext]')
+          name: path.posix.join('static/img', '[name].[hash:7].[ext]'),
+          esModule: false
         }
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: path.posix.join('static/media', '[name].[hash:7].[ext]'),
+          esModule: false
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: path.posix.join('static/fonts', '[name].[hash:7].[ext]'),
+          esModule: false
+        }
+      }, {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto'
       }
+
     ]
   },
   plugins: [
@@ -104,7 +124,7 @@ const webpackConfig = {
     new HtmlWebpackPlugin({
       template: './examples/index.tpl',
       filename: './index.html',
-      favicon: './examples/favicon.ico'
+      favicon: './examples/assets/images/logo/logo-mini.png'
     }),
     new CopyWebpackPlugin([
       { from: 'examples/versions.json' }

@@ -198,18 +198,18 @@ KarmanPlus 提供的排版模式有时候并不满足要求，当您想要用自
       this.lists = [
         {
           imgUrl:
-            'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg',
-          name: '鹿',
+            'https://picsum.photos/500',
+          name: '图片1',
         },
         {
           imgUrl:
-            'https://fuss10.elemecdn.com/1/34/19aa98b1fcb2781c4fba33d850549jpeg.jpeg',
-          name: '马',
+            'https://picsum.photos/500',
+          name: '图片2',
         },
         {
           imgUrl:
-            'https://fuss10.elemecdn.com/0/6f/e35ff375812e6b0020b6b4e8f9583jpeg.jpeg',
-          name: '山狮',
+            'https://picsum.photos/500',
+          name: '图片3',
         },
       ]
     },

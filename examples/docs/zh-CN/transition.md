@@ -32,9 +32,9 @@ Karman 内应用在部分组件的过渡动画，你也可以直接使用。在�
 <style>
   .transition-box {
     margin-bottom: 10px;
-    width: 200px;
+    width: 260px;
     height: 100px;
-    border-radius: 4px;
+    border-radius: 100px 0;
     background-color: #3366FF;
     text-align: center;
     color: #fff;
@@ -81,9 +81,9 @@ Karman 内应用在部分组件的过渡动画，你也可以直接使用。在�
 <style>
   .transition-box {
     margin-bottom: 10px;
-    width: 200px;
+    width: 260px;
     height: 100px;
-    border-radius: 4px;
+    border-radius: 100px 0;
     background-color: #3366FF;
     text-align: center;
     color: #fff;
@@ -128,9 +128,9 @@ Karman 内应用在部分组件的过渡动画，你也可以直接使用。在�
 <style>
   .transition-box {
     margin-bottom: 10px;
-    width: 200px;
+    width: 260px;
     height: 100px;
-    border-radius: 4px;
+    border-radius: 100px 0;
     background-color: #3366FF;
     text-align: center;
     color: #fff;

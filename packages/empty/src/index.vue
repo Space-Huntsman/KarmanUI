@@ -38,7 +38,7 @@ export default {
   },
   computed: {
     emptyDescription() {
-      return this.description || t('el.empty.description');
+      return this.description || t('lang.empty.description');
     },
     imageStyle() {
       return {

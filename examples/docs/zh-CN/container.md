@@ -23,18 +23,18 @@
   <kui-header>Header</kui-header>
   <kui-main>Main</kui-main>
 </kui-container>
-
+<br/>
 <kui-container>
   <kui-header>Header</kui-header>
   <kui-main>Main</kui-main>
   <kui-footer>Footer</kui-footer>
 </kui-container>
-
+<br/>
 <kui-container>
   <kui-aside width="200px">Aside</kui-aside>
   <kui-main>Main</kui-main>
 </kui-container>
-
+<br/>
 <kui-container>
   <kui-header>Header</kui-header>
   <kui-container>
@@ -42,7 +42,7 @@
     <kui-main>Main</kui-main>
   </kui-container>
 </kui-container>
-
+<br/>
 <kui-container>
   <kui-header>Header</kui-header>
   <kui-container>
@@ -53,7 +53,7 @@
     </kui-container>
   </kui-container>
 </kui-container>
-
+<br/>
 <kui-container>
   <kui-aside width="200px">Aside</kui-aside>
   <kui-container>
@@ -61,7 +61,7 @@
     <kui-main>Main</kui-main>
   </kui-container>
 </kui-container>
-
+<br/>
 <kui-container>
   <kui-aside width="200px">Aside</kui-aside>
   <kui-container>

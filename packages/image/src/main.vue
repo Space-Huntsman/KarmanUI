@@ -4,7 +4,7 @@
       <div class="kui-image__placeholder"></div>
     </slot>
     <slot v-else-if="error" name="error">
-      <div class="kui-image__error">{{ t('el.image.error') }}</div>
+      <div class="kui-image__error">{{ t('lang.image.error') }}</div>
     </slot>
     <img
       v-else

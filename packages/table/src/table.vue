@@ -51,7 +51,7 @@
         ref="emptyBlock"
         :style="emptyBlockStyle">
         <span class="kui-table__empty-text" >
-          <slot name="empty">{{ emptyText || t('el.table.emptyText') }}</slot>
+          <slot name="empty">{{ emptyText || t('lang.table.emptyText') }}</slot>
         </span>
       </div>
       <div
@@ -70,7 +70,7 @@
       <table-footer
         :store="store"
         :border="border"
-        :sum-text="sumText || t('el.table.sumText')"
+        :sum-text="sumText || t('lang.table.sumText')"
         :summary-method="summaryMethod"
         :default-sort="defaultSort"
         :style="{
@@ -131,7 +131,7 @@
         <table-footer
           fixed="left"
           :border="border"
-          :sum-text="sumText || t('el.table.sumText')"
+          :sum-text="sumText || t('lang.table.sumText')"
           :summary-method="summaryMethod"
           :store="store"
           :style="{
@@ -192,7 +192,7 @@
         <table-footer
           fixed="right"
           :border="border"
-          :sum-text="sumText || t('el.table.sumText')"
+          :sum-text="sumText || t('lang.table.sumText')"
           :summary-method="summaryMethod"
           :store="store"
           :style="{
