@@ -132,7 +132,7 @@
 
 ```html
 <kui-descriptions title="自定义样式列表" :column="3" border>
-  <kui-descriptions-item label="用户名" labkui-class-name="my-label" content-class-name="my-content">kooriookami</kui-descriptions-item>
+  <kui-descriptions-item label="用户名" label-class-name="my-label" content-class-name="my-content">kooriookami</kui-descriptions-item>
   <kui-descriptions-item label="手机号">18100000000</kui-descriptions-item>
   <kui-descriptions-item label="居住地">苏州市</kui-descriptions-item>
   <kui-descriptions-item label="备注">

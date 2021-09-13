@@ -99,4 +99,4 @@ Vue.use(KarmanUI)
 }
 ```
 
-如果不清楚 `babel-plugin-component` 是什么，请阅读 <a href="./#/zh-CN/component/quickstart">快速上手</a> 一节。更多 `karman-theme` 用法请参考[项目仓库](https://github.com/KarmanUI/karman-theme)。
+如果不清楚 `babel-plugin-component` 是什么，请阅读 <a href="./#/zh-CN/component/quickstart">快速上手</a> 一节。更多 `karman-theme` 用法请参考 `/theme`目录。

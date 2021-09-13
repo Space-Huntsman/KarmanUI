@@ -945,7 +945,7 @@ $--calendar-cell-width: 85px !default;
 /* Form
 -------------------------- */
 /// fontSize||Font|1
-$--form-labkui-font-size: $--font-size-base !default;
+$--form-label-font-size: $--font-size-base !default;
 
 /* Avatar
 --------------------------*/
@@ -978,7 +978,7 @@ $--empty-bottom-margin-top: 20px !default;
 $--descriptions-header-margin-bottom: 20px !default;
 $--descriptions-title-font-size: 16px !default;
 $--descriptions-table-border: 1px solid $--border-color-lighter !default;
-$--descriptions-item-bordered-labkui-background: #fafafa !default;
+$--descriptions-item-bordered-label-background: #fafafa !default;
 
 /* Skeleton
 --------------------------*/

@@ -1,6 +1,6 @@
 <template>
   <form class="kui-form" :class="[
-    labelPosition ? 'kui-form--labkui-' + labelPosition : '',
+    labelPosition ? 'kui-form--label-' + labelPosition : '',
     { 'kui-form--inline': inline }
   ]">
     <slot></slot>

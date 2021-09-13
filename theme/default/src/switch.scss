@@ -96,12 +96,12 @@
 
   @include m(wide) {
     .kui-switch__label {
-      &.kui-switch__labkui--left {
+      &.kui-switch__label--left {
         span {
           left: 10px;
         }
       }
-      &.kui-switch__labkui--right {
+      &.kui-switch__label--right {
         span {
           right: 10px;
         }
@@ -109,8 +109,8 @@
     }
   }
 
-  & .labkui-fade-enter,
-  & .labkui-fade-leave-active {
+  & .label-fade-enter,
+  & .label-fade-leave-active {
     opacity: 0;
   }
 }

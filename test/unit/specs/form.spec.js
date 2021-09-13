@@ -25,7 +25,7 @@ describe('Form', () => {
   it('label width', done => {
     vm = createVue({
       template: `
-        <kui-form ref="form" :model="form" labkui-width="80px">
+        <kui-form ref="form" :model="form" label-width="80px">
           <kui-form-item label="活动名称">
             <kui-input v-model="form.name"></kui-input>
           </kui-form-item>
@@ -46,7 +46,7 @@ describe('Form', () => {
   it('auto label width', async() => {
     vm = createVue({
       template: `
-        <kui-form ref="form" :model="form" labkui-width="auto">
+        <kui-form ref="form" :model="form" label-width="auto">
           <kui-form-item label="活动名称">
             <kui-input v-model="form.name"></kui-input>
           </kui-form-item>
@@ -108,7 +108,7 @@ describe('Form', () => {
     vm = createVue({
       template: `
         <div>
-          <kui-form :model="form" labkui-position="top" ref="labelTop">
+          <kui-form :model="form" label-position="top" ref="labelTop">
             <kui-form-item>
               <kui-input v-model="form.name"></kui-input>
             </kui-form-item>
@@ -116,7 +116,7 @@ describe('Form', () => {
               <kui-input v-model="form.address"></kui-input>
             </kui-form-item>
           </kui-form>
-          <kui-form :model="form" labkui-position="left" ref="labelLeft">
+          <kui-form :model="form" label-position="left" ref="labelLeft">
             <kui-form-item>
               <kui-input v-model="form.name"></kui-input>
             </kui-form-item>
@@ -135,8 +135,8 @@ describe('Form', () => {
         };
       }
     }, true);
-    expect(vm.$refs.labelTop.$el.classList.contains('kui-form--labkui-top')).to.be.true;
-    expect(vm.$refs.labelLeft.$el.classList.contains('kui-form--labkui-left')).to.be.true;
+    expect(vm.$refs.labelTop.$el.classList.contains('kui-form--label-top')).to.be.true;
+    expect(vm.$refs.labelLeft.$el.classList.contains('kui-form--label-left')).to.be.true;
     done();
   });
   it('label size', () => {
