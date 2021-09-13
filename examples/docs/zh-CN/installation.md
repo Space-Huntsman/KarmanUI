@@ -23,13 +23,5 @@ npm i karman-ui -S
 我们建议使用 CDN 引入 Karman 的用户在链接地址上锁定版本，以免将来 Karman 升级时受到非兼容性更新的影响。锁定版本的方法请查看 [unpkg.com](https://unpkg.com)。
 :::
 
-### Hello world
-
-通过 CDN 的方式我们可以很容易地使用 Karman 写出一个 Hello world 页面。[在线演示](https://codepen.io/ziyoung/pen/rRKYpd)
-
-<iframe height="265" style="width: 100%;" scrolling="no" title="Karman demo" src="//codepen.io/ziyoung/embed/rRKYpd/?height=265&theme-id=light&default-tab=html" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/ziyoung/pen/rRKYpd/'>Karman demo</a> by hetech
-  (<a href='https://codepen.io/ziyoung'>@ziyoung</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 
 如果是通过 npm 安装，并希望配合 webpack 使用，请阅读下一节：[快速上手](/#/zh-CN/component/quickstart)。
