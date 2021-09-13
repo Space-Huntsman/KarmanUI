@@ -119,7 +119,7 @@
       z-index: 4;
       left: 54px;
       top: 28%;
-      padding-top: 150px;
+      padding-top: 80px;
 
       .slogen {
         background-image: url("~examples/assets/images/home/slogen.png");
@@ -361,11 +361,11 @@
             // animate__delay-5ss  animate__fadeInLeft
 
             setTimeout(() => {
-              this.$refs.slogen.className = 'slogen slogen-light animate__animated animate__fadeOut animate__duration-20ss';
+              this.$refs.slogen.className = 'slogen slogen-light animate__animated animate__fadeOut animate__duration-25ss';
             }, 500);
             setTimeout(() => {
               this.$refs.slogen.remove();
-            }, 2500);
+            }, 3000);
             setTimeout(() => {
               this.animateStatus = 2;
             }, 4000);
