@@ -90,6 +90,9 @@ import {KuiDescriptionsItem} from './descriptions-item'
 import {KuiResult} from './result'
 
 
+import { KUIOrbitElements } from './orbit-elements'
+import { KUISatellitePoint } from './satellite-point'
+
 export interface InstallationOptions {
   locale: any,
   i18n: any,
@@ -378,3 +381,11 @@ export class DescripitionsItem extends KuiDescriptionsItem {}
 /** Result Component */
 export class Result extends KuiResult {}
 
+
+/** OrbitElements Component */
+export class OrbitElements extends KUIOrbitElements {}
+
+
+
+/** SatellitePoint Component */
+export class SatellitePoint extends KUISatellitePoint {}

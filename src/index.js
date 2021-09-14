@@ -88,6 +88,8 @@ import Empty from '../packages/empty/index.js';
 import Descriptions from '../packages/descriptions/index.js';
 import DescriptionsItem from '../packages/descriptions-item/index.js';
 import Result from '../packages/result/index.js';
+import OrbitElements from '../packages/orbit-elements/index.js';
+import SatellitePoint from '../packages/satellite-point/index.js';
 import locale from 'karman-ui/src/locale';
 import CollapseTransition from 'karman-ui/src/transitions/collapse-transition';
 
@@ -175,6 +177,8 @@ const components = [
   Descriptions,
   DescriptionsItem,
   Result,
+  OrbitElements,
+  SatellitePoint,
   CollapseTransition
 ];
 
@@ -302,5 +306,7 @@ export default {
   Empty,
   Descriptions,
   DescriptionsItem,
-  Result
+  Result,
+  OrbitElements,
+  SatellitePoint
 };
