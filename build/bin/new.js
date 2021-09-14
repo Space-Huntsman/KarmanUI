@@ -16,6 +16,7 @@ const fileSave = require('file-save');
 const uppercamelcase = require('uppercamelcase');
 const componentname = process.argv[2];
 const chineseName = process.argv[3] || componentname;
+const groupName = process.argv[4] || 'Others';
 const ComponentName = uppercamelcase(componentname);
 const PackagePath = path.resolve(__dirname, '../../packages', componentname);
 const Files = [
@@ -127,8 +128,8 @@ Files.forEach(file => {
 const navConfigFile = require('../../examples/nav.config.json');
 
 Object.keys(navConfigFile).forEach(lang => {
-  let groups = navConfigFile[lang][2].groups;
-  groups[groups.length - 1].list.push({
+  let groups = navConfigFile[lang].find((item) => item.hasOwnProperty('groups')).groups;
+  groups.find(item => groupName === item.groupName).list.push({
     path: `/${componentname}`,
     title: lang === 'zh-CN' && componentname !== chineseName
       ? `${ComponentName} ${chineseName}`

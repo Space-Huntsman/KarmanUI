@@ -320,7 +320,7 @@
           <li class="nav-item">
             <kui-link
               active-class="active"
-              href="https://github.com/Space-Huntsman" target="_blank"><i class="kui-icon-github"/> Git 仓库
+              href="https://github.com/Space-Huntsman/KarmanUI" target="_blank"><i class="kui-icon-github"/> Git 仓库
             </kui-link>
           </li>
           <li v-if="false"

@@ -1,6 +1,7 @@
 #! /bin/bash
 git remote remove local-origin
 git remote rename origin github-origin
+git remote remove origin
 git remote add origin ssh://git@gitlab.hl.xa:9002/wangwei/karman-ui.git
 git pull
 # 思考良久决定还是让手动向上推

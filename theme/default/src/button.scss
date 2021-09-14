@@ -43,7 +43,10 @@
   &::-moz-focus-inner {
     border: 0;
   }
+  & [class^="kui-icon-"] {
 
+
+  }
   & [class*="kui-icon-"] {
     & + span {
       margin-left: 5px;

@@ -3,7 +3,7 @@
   "version": "v1.0.1",
   "author": {
     "name": "Space Huntsman",
-    "email": ""
+    "email": "dc2002007@gmail.com"
   },
   "description": "A Component Library for Vue.js.",
   "main": "lib/karman-ui.common.js",
@@ -49,17 +49,18 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:spaceHuntsman/karman.git"
+    "url": "git@github.com:Space-Huntsman/KarmanUI.git"
   },
-  "homepage": "http://karman.spaceHuntsman.io",
+  "homepage": "http://karmanui.com",
   "keywords": [
     "karman",
+    "karman-ui",
     "vue",
     "components"
   ],
-  "license": "MIT",
+  "license": "BSD",
   "bugs": {
-    "url": "https://github.com/spaceHuntsman/karman/issues"
+    "url": "https://github.com/Space-Huntsman/KarmanUI/issues"
   },
   "unpkg": "lib/index.js",
   "style": "lib/theme-default/index.css",
