@@ -2,4 +2,86 @@
 @import "common/var";
 
 @include b(orbit-elements) {
+  &>.kui-col{
+
+
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, .12);
+  }
+  & .element-col {
+
+
+    & > .kui-col {
+      padding: 5px 0px;
+      line-height:2em ;
+      &:nth-child(1) {
+        padding: 5px 10px;
+        //font-weight: bold;
+
+      }
+      &:nth-child(2) {
+        color: $--color-info;
+        text-indent: 0.5em;
+      }
+    }
+  }
+  &.label-position {
+
+    &-top {
+    }
+
+    &-left {
+      & .element-col {
+
+
+        & > .kui-col {
+          &:nth-child(1) {
+            width: 110px;
+          }
+
+          &:nth-child(2) {
+            width: calc(100% - 110px - 0.5em);
+          }
+        }
+      }
+    }
+  }
+
+  &  {
+    white-space: nowrap;
+  }
+
+  // medium / small / mini
+  &.medium {
+    & .element-col {
+      font-size: $--font-size-base;
+    }
+
+  }
+
+  &.small {
+
+    & .element-col {
+      font-size: $--font-size-small;
+    }
+  }
+
+  &.mini {
+    & .element-col {
+      font-size: $--font-size-extra-small;
+    }
+  }
+  & .kui-input-number{  width: 100%;}
+  & .kui-date {
+    &-editor {
+      &.kui-input {
+        width: 100%;
+
+        &__inner {
+          width: 100%;
+        }
+      }
+
+    }
+  }
 }

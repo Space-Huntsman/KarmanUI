@@ -39,7 +39,7 @@ export default ${ComponentName};`
 
 <script>
 export default {
-  name: 'KUI${ComponentName}'
+  name: 'Kui${ComponentName}'
 };
 </script>`
   },
@@ -78,7 +78,7 @@ describe('${ComponentName}', () => {
     content: `import { KarmanUIComponent } from './component'
 
 /** ${ComponentName} Component */
-export declare class KUI${ComponentName} extends KarmanUIComponent {
+export declare class Kui${ComponentName} extends KarmanUIComponent {
 }`
   }
 ];
@@ -106,10 +106,10 @@ const karmanTsPath = path.join(__dirname, '../../types/karman-ui.d.ts');
 
 let karmanTsText = `${fs.readFileSync(karmanTsPath)}
 /** ${ComponentName} Component */
-export class ${ComponentName} extends KUI${ComponentName} {}`;
+export class ${ComponentName} extends Kui${ComponentName} {}`;
 
 const index = karmanTsText.indexOf('export') - 1;
-const importString = `import { KUI${ComponentName} } from './${componentname}'`;
+const importString = `import { Kui${ComponentName} } from './${componentname}'`;
 
 karmanTsText = karmanTsText.slice(0, index) + importString + '\n' + karmanTsText.slice(index);
 
