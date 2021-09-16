@@ -135,7 +135,7 @@
       &.is-fixed {
         position: fixed;
         bottom: 0;
-        width: 868px;
+        width: calc(100% - 305px);
       }
 
       i {

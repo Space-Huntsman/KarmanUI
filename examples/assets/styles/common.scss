@@ -78,11 +78,13 @@ button, input, select, textarea {
 
 .container,
 .page-container {
-  width: 1140px;
+  width: 98%;
   padding: 0;
   margin: 0 auto;
 }
-
+.page-component .page-component__nav{
+  border-right:1px solid #E6E8F0;
+}
 .page-container {
   padding-top: 55px;
 

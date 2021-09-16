@@ -10,9 +10,7 @@
 
 <template>
     <div>
-        <kui-orbit-elements v-model="orbitData" size="medium" :label-width="120"
-                            label-align="left" @change="changeHandle" label-position="left" :col-in-row-count="2"
-                            :high-precision="true">
+        <kui-orbit-elements v-model="orbitData"  :col-in-row-count="7">
         </kui-orbit-elements>
         <kui-divider>输出</kui-divider>
         <pre>{{ orbitData }}</pre>
@@ -48,7 +46,9 @@
 :::
 
 ### 排版
-
+:::tip
+当设置 `:col-in-row-count="9"` 时，将每个要素分为1/9宽度，但要注意的是历元时间字段的宽度不会被其影响
+:::
 拥有自由灵活的排版方式，可根据实际容器宽度进行调整
 :::demo
 
@@ -57,23 +57,20 @@
 <template>
     <div>
         <kui-divider>标题居上单行排版</kui-divider>
-        <kui-orbit-elements v-model="orbitData" size="mini"
+        <kui-orbit-elements v-model="orbitData" 
                             label-align="left" @change="changeHandle" label-position="top" :col-in-row-count="9"
                             :high-precision="true">
         </kui-orbit-elements>
-        <kui-alert show-icon :closable="false" type="success">
-            `:col-in-row-count="9"` 参数的设置有效的将每个要素分为1/9宽度，但要注意的是历元时间字段的宽度不会被其影响
-        </kui-alert>
-        <kui-divider>2列居左排版</kui-divider>
+        <kui-divider>三列居左排版</kui-divider>
         <kui-orbit-elements v-model="orbitData" size="mini" :label-width="130"
-                            label-align="left" @change="changeHandle" label-position="left" :col-in-row-count="2"
+                            label-align="left" @change="changeHandle" label-position="left" :col-in-row-count="3"
                             :high-precision="true">
             <template slot="label-a">半长轴(km)</template>
             <template slot="label-date">UTC时刻</template>
         </kui-orbit-elements>
-        <kui-divider>2列顶部标题排版</kui-divider>
+        <kui-divider>四列顶部标题排版</kui-divider>
         <kui-orbit-elements v-model="orbitData" size="mini" :label-width="110"
-                            label-align="left" @change="changeHandle" label-position="top" :col-in-row-count="2"
+                            label-align="left" @change="changeHandle" label-position="top" :col-in-row-count="4"
                             :high-precision="false">
         </kui-orbit-elements>
         <kui-divider>3列居左排版</kui-divider>
@@ -116,26 +113,27 @@
 ### 显示
 
 显示有多种选项，同时可选择是否显示边框
-
+:::tip
+ 设置 `label-position="left"`的情况下`col-in-row-count`尽量不要大于4，否则会显示异常
+:::
+ 
 :::demo
 
 ```html
 
 <template>
     <div>
-        <kui-alert show-icon :closable="false" type="error">:col-in-row-count="9"
-            设置 `label-position="left"`的情况下`col-in-row-count`尽量不要大于3，否则会显示异常
-        </kui-alert>
-        <kui-divider>两列显示</kui-divider>
-        <kui-orbit-elements v-model="orbitData" size="medium" :read-only="true" :label-width="130"
-                            label-align="left" @change="changeHandle" label-position="left" :col-in-row-count="2"
-                            :high-precision="true">
-        </kui-orbit-elements>
         <kui-divider>单行显示</kui-divider>
         <kui-orbit-elements v-model="orbitData" size="mini" :read-only="true" :label-width="130"
                             label-align="left" @change="changeHandle" label-position="top" :col-in-row-count="9"
                             :high-precision="false">
         </kui-orbit-elements>
+        <kui-divider>两列显示</kui-divider>
+        <kui-orbit-elements v-model="orbitData" size="medium" :read-only="true" :label-width="130"
+                            label-align="left" @change="changeHandle" label-position="left" :col-in-row-count="2"
+                            :high-precision="true">
+        </kui-orbit-elements>
+      
         <kui-divider>带边框三列 标题靠右</kui-divider>
         <kui-orbit-elements v-model="orbitData" show-border size="medium" :read-only="true" :label-width="130"
                             label-align="right" @change="changeHandle" label-position="left" :col-in-row-count="3"
@@ -193,7 +191,7 @@
 | show-border | 是否显示边框 | Boolean | true/false | false |
 | read-only | 是否只读，只读的情况下不显示表单，为纯文本方式 | Boolean | true/false | false |
 | col-in-row-count| 一行的列数，用于设置每个根数占一行的比例，此设置对历元时刻没有绝对效果 | Number | -- | 1 |
-| label-position| 标题位置 | String  | left / right / center |top|
+| label-position| 标题位置，设置 `label-position="left"`的情况下`col-in-row-count`尽量不要大于4，否则会显示异常 | String  | left / right / center |top|
 | label-width| 标题宽度，单位px  | Number | -- | 120 |
 | label-align| 标题排版  | String | left / right / center | left |
 | size| 尺寸  | String | medium / small / mini | medium |
