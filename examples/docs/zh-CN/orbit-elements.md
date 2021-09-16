@@ -10,7 +10,7 @@
 
 <template>
     <div>
-        <kui-orbit-elements v-model="orbitData" size="medium" :label-width="110"
+        <kui-orbit-elements v-model="orbitData" size="medium" :label-width="120"
                             label-align="left" @change="changeHandle" label-position="left" :col-in-row-count="2"
                             :high-precision="true">
         </kui-orbit-elements>
@@ -72,7 +72,7 @@
             <template slot="label-date">UTC时刻</template>
         </kui-orbit-elements>
         <kui-divider>2列顶部标题排版</kui-divider>
-        <kui-orbit-elements v-model="orbitData2" size="mini" :label-width="110"
+        <kui-orbit-elements v-model="orbitData" size="mini" :label-width="110"
                             label-align="left" @change="changeHandle" label-position="top" :col-in-row-count="2"
                             :high-precision="false">
         </kui-orbit-elements>
@@ -116,6 +116,7 @@
 ### 显示
 
 显示有多种选项，同时可选择是否显示边框
+
 :::demo
 
 ```html
@@ -127,12 +128,12 @@
         </kui-alert>
         <kui-divider>两列显示</kui-divider>
         <kui-orbit-elements v-model="orbitData" size="medium" :read-only="true" :label-width="130"
-                            label-align="left" @change="changeHandle" label-position="left" :col-in-row-count="3"
+                            label-align="left" @change="changeHandle" label-position="left" :col-in-row-count="2"
                             :high-precision="true">
         </kui-orbit-elements>
-        <kui-divider>两列显示</kui-divider>
+        <kui-divider>单行显示</kui-divider>
         <kui-orbit-elements v-model="orbitData" size="mini" :read-only="true" :label-width="130"
-                            label-align="left" @change="changeHandle" label-position="top" :col-in-row-count="8"
+                            label-align="left" @change="changeHandle" label-position="top" :col-in-row-count="9"
                             :high-precision="false">
         </kui-orbit-elements>
         <kui-divider>带边框三列 标题靠右</kui-divider>

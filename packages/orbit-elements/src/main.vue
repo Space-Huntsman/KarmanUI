@@ -9,7 +9,7 @@
         </kui-col>
         <kui-col :style="inputColStyle">
           <template v-if="inputReadOnly">
-            {{ value.a }}
+            {{ value.a ? value.a.toFixed(precisionA) : value.a }}
           </template>
           <template v-else>
             <kui-input-number :controls="false" :precision="precisionA" v-model="value.a" :size="size"
@@ -29,7 +29,7 @@
         </kui-col>
         <kui-col :style="inputColStyle">
           <template v-if="inputReadOnly">
-            {{ value.e }}
+            {{ value.e ? value.e.toFixed(precision) : value.e }}
           </template>
           <template v-else>
             <kui-input-number :controls="false" :precision="precision" v-model="value.e" :size="size" placeholder="请输入">
@@ -48,7 +48,7 @@
         </kui-col>
         <kui-col :style="inputColStyle">
           <template v-if="inputReadOnly">
-            {{ value.i }}
+            {{ value.i ? value.i.toFixed(precision) : value.i }}
           </template>
           <template v-else>
             <kui-input-number :controls="false" :precision="precision" v-model="value.i" :size="size" placeholder="请输入">
@@ -67,7 +67,7 @@
         </kui-col>
         <kui-col :style="inputColStyle">
           <template v-if="inputReadOnly">
-            {{ value.o }}
+            {{ value.o ? value.o.toFixed(precision) : value.o }}
           </template>
           <template v-else>
             <kui-input-number :controls="false" :precision="precision" v-model="value.o" :size="size" placeholder="请输入"><span
@@ -87,7 +87,7 @@
         </kui-col>
         <kui-col :style="inputColStyle">
           <template v-if="inputReadOnly">
-            {{ value.w }}
+            {{ value.w ? value.w.toFixed(precision) : value.w }}
           </template>
           <template v-else>
             <kui-input-number :controls="false" :precision="precision" v-model="value.w" :size="size" placeholder="请输入"><span
@@ -107,7 +107,7 @@
         </kui-col>
         <kui-col :style="inputColStyle">
           <template v-if="inputReadOnly">
-            {{ value.m }}
+            {{ value.m ? value.m.toFixed(precision) : value.m }}
           </template>
           <template v-else>
             <kui-input-number :controls="false" :precision="precision" v-model="value.m" :size="size" placeholder="请选择"><span
@@ -130,11 +130,12 @@
           <template v-else>
             <kui-row :gutter="2">
               <kui-col :span="highPrecision?18:24" style="width: 14em">
-                <kui-date-picker v-model="dateTime" type="datetime" placeholder="请选择" :size="size"
+                <kui-date-picker @change="calcDateVal" v-model="dateTime" type="datetime" placeholder="请选择" :size="size"
                                  clearable></kui-date-picker>
               </kui-col>
               <kui-col :span="6" v-if="highPrecision" style="width: 6em">
-                <kui-input-number :controls="false" :precision="4" :max="0.9999" :min="0" v-model="millisecond"
+                <kui-input-number @change="calcDateVal" :controls="false" :min="0" :max="9999"
+                                  v-model="millisecond"
                                   :size="size"
                                   placeholder="请输入">
                 </kui-input-number>
@@ -253,19 +254,17 @@ export default {
   watch: {
     value: {
       handler(newVal, oldVal) {
-        console.log(newVal, oldVal, newVal === oldVal);
         if (oldVal) {
           this.$emit('change', this.value);
         }
+        // this.initTimeVal();
+      }, deep: true,
+      immediate: false
+    }, 'value.dateTime': {
+      handler(newVal, oldVal) {
         this.initTimeVal();
       }, deep: true,
       immediate: false
-    },
-    dateTime() {
-      this.calcDateVal();
-    },
-    millisecond() {
-      this.calcDateVal();
     }
   },
   mounted() {
@@ -276,10 +275,16 @@ export default {
       if (!this.value.dateTime) {
         return;
       }
-      if (this.highPrecision && this.value.dateTime && /\./.test(this.value.dateTime)) {
-        const timeArray = this.value.dateTime.split('.');
-        this.dateTime = new Date(timeArray[0]);
-        this.millisecond = +timeArray[1] / 10000;
+      if (this.highPrecision && this.value.dateTime) {
+        if (/\./.test(this.value.dateTime)) {
+          const timeArray = this.value.dateTime.split('.');
+          this.dateTime = new Date(timeArray[0]);
+          this.millisecond = +timeArray[1] ;
+        } else {
+          this.dateTime = new Date(this.value.dateTime);
+          this.millisecond = 0;
+        }
+
       }
       if (!this.highPrecision) {
         if (this.value.dateTime) {
@@ -296,7 +301,7 @@ export default {
     calcDateVal() {
       if (this.dateTime) {
         if (this.highPrecision) {
-          this.$set(this.value, 'dateTime', `${formatDate(this.dateTime, this.format)}.${((this.millisecond * 10000)).toFixed(0)}`);
+          this.$set(this.value, 'dateTime', `${formatDate(this.dateTime, this.format)}.${((this.millisecond )).toFixed(0)}`);
         } else {
           this.$set(this.value, 'dateTime', `${formatDate(this.dateTime, this.format)}`);
         }
@@ -338,8 +343,8 @@ export default {
     dataPickerMinWidth() {
       if (this.readOnly) {
         return {
-          minWidth: `${this.colWidth}%`,
-          width: 'auto'
+          minWidth: `calc( 15em + ${this.labelPosition === 'left' ? this.labelWidth : 0}px )`,
+          width: `${this.colWidth}%`
         };
       } else {
         return {
