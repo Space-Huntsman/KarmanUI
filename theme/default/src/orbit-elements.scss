@@ -2,26 +2,64 @@
 @import "common/var";
 
 @include b(orbit-elements) {
-  &>.kui-col{
+  &.show-border>.kui-col {
+    border-top: $__border-base;
+    border-bottom: $__border-base;
+    position: relative;
 
 
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, .12);
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -0.5px;
+      height: 100%;
+      width: 1px;
+      border-left: $__border-base;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -0.5px;
+      height: 100%;
+      width: 0px;
+      border-left: $__border-base;
+    }
+  }
+  & > .kui-col {
+    margin-bottom: 10px;
   }
   & .element-col {
 
 
     & > .kui-col {
       padding: 5px 0px;
-      line-height:2em ;
+      line-height: 2em;
+      font-size: 14px;
+
+      &>* {
+        font-size: 14px;
+      }
+
       &:nth-child(1) {
         padding: 5px 10px;
         //font-weight: bold;
-
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
+
       &:nth-child(2) {
+        padding: 5px 10px;
         color: $--color-info;
-        text-indent: 0.5em;
+        //text-indent: 0.5em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
   }
@@ -47,7 +85,7 @@
     }
   }
 
-  &  {
+  & {
     white-space: nowrap;
   }
 
@@ -71,7 +109,9 @@
       font-size: $--font-size-extra-small;
     }
   }
-  & .kui-input-number{  width: 100%;}
+  & .kui-input-number {
+    width: 100%;
+  }
   & .kui-date {
     &-editor {
       &.kui-input {

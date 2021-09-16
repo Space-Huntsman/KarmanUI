@@ -1,11 +1,11 @@
 <template>
   <div style="margin: 20px;">
-    <kui-orbit-elements v-model="orbitData" size="medium" :inline="true" :read-only="true" :label-width="90"
+    <kui-orbit-elements v-model="orbitData" size="medium" :inline="true" :read-only="false" :label-width="110"
                         label-align="left"  @change="changeHandle" label-position="left" :col-in-row-count="7" :high-precision="true">
       <template slot="label-a">半长轴(km)</template>
       <template slot="label-date">UTC时刻</template>
     </kui-orbit-elements>
-    {{ orbitData }}
+    原始值：{{ orbitData }}
   </div>
 </template>
 

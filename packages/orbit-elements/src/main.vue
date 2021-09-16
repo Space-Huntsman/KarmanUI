@@ -1,5 +1,7 @@
 <template>
-  <kui-row class="kui-orbit-elements" :class="[size,`label-position-${labelPosition}`]" :gutter="gutter">
+  <kui-row class="kui-orbit-elements"
+           :class="[size,`label-position-${labelPosition}`,showBorder||showBorder===''?'show-border':'']"
+           :gutter="gutter">
     <kui-col :style="colStyle">
       <kui-row class="element-col">
         <kui-col :style="labelColStyle">
@@ -116,22 +118,22 @@
         </kui-col>
       </kui-row>
     </kui-col>
-    <kui-col v-if="showDate||showDate===''" :style="colStyle">
+    <kui-col v-if="showDate||showDate===''" :style="dataPickerMinWidth">
       <kui-row class="element-col">
         <kui-col :style="labelColStyle">
           <slot name="label-date">历元时刻(BJT)</slot>
         </kui-col>
-        <kui-col :style="inputColStyle">
+        <kui-col :style="inputColStyle" style="width: 14em">
           <template v-if="inputReadOnly">
             {{ value.dateTime }}
           </template>
           <template v-else>
             <kui-row :gutter="2">
-              <kui-col :span="highPrecision?18:24">
+              <kui-col :span="highPrecision?18:24" style="width: 14em">
                 <kui-date-picker v-model="dateTime" type="datetime" placeholder="请选择" :size="size"
                                  clearable></kui-date-picker>
               </kui-col>
-              <kui-col :span="6" v-if="highPrecision">
+              <kui-col :span="6" v-if="highPrecision" style="width: 6em">
                 <kui-input-number :controls="false" :precision="4" :max="0.9999" :min="0" v-model="millisecond"
                                   :size="size"
                                   placeholder="请输入">
@@ -161,6 +163,7 @@ export default {
   name: 'KuiOrbitElements',
   props: {
     readOnly: false,
+    showBorder: false,
     precisionA: {
       default: 3,
       type: Number
@@ -179,7 +182,7 @@ export default {
       type: String
     },
     labelWidth: {
-      default: 110,
+      default: 120,
       type: Number
     },
     labelPosition: {
@@ -201,7 +204,7 @@ export default {
       type: String
     },
     gutter: {
-      default: 10,
+      default: 0,
       type: Number
     },
     highPrecision: {
@@ -322,12 +325,31 @@ export default {
     },
     inputColStyle() {
       return {
-        width: this.labelPosition === 'top' ? '100%' : `calc(100 % - ${this.labelWidth}px - 0.5em)`
+        width: this.labelPosition === 'top' ? '100%' : `calc(100% - ${this.labelPosition === 'left' ? this.labelWidth : 0}px )`
       };
     },
+    colWidth() {
+      let count = this.showDate && this.colInRowCount > 6 ? this.colInRowCount + 1 : this.colInRowCount;
+      return this.inline ? this.colInRowCount === 0 ? 100 : 100 / count : 100;
+    },
     colStyle() {
-      return {width: this.inline ? `${this.colInRowCount === 0 ? 100 : 100 / this.colInRowCount}% ` : '100%'};
+      return {width: `${this.colWidth}% `};
+    },
+    dataPickerMinWidth() {
+      if (this.readOnly) {
+        return {
+          minWidth: `${this.colWidth}%`,
+          width: 'auto'
+        };
+      } else {
+        return {
+          ...this.colStyle,
+          minWidth: `calc( 19em + ${this.labelPosition === 'left' ? this.labelWidth : 0}px + 0.5em)`
+        };
+      }
+
     }
+
   }
 };
 </script>
