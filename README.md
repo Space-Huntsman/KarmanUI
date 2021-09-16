@@ -33,4 +33,4 @@ Modern browsers and Internet Explorer 10+.
 
 
 ## LICENSE
-[MIT](LICENSE)
+[BSD](LICENSE)

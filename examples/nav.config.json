@@ -66,6 +66,19 @@
           ]
         },
         {
+          "groupName": "航天领域",
+          "list": [
+            {
+              "path": "/orbit-elements",
+              "title": "OrbitElements 轨道根数"
+            },
+            {
+              "path": "/satellite-point",
+              "title": "SatellitePoint 星下点"
+            }
+          ]
+        },
+        {
           "groupName": "Form",
           "list": [
             {
@@ -298,7 +311,6 @@
             }
           ]
         }
-
       ]
     },
     {

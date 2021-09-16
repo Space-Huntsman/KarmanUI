@@ -1,0 +1,127 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(orbit-elements) {
+  &.show-border>.kui-col {
+    border-top: $__border-base;
+    border-bottom: $__border-base;
+    position: relative;
+
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -0.5px;
+      height: 100%;
+      width: 1px;
+      border-left: $__border-base;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -0.5px;
+      height: 100%;
+      width: 0px;
+      border-left: $__border-base;
+    }
+  }
+  & > .kui-col {
+    margin-bottom: 10px;
+  }
+  & .element-col {
+
+
+    & > .kui-col {
+      padding: 5px 0px;
+      line-height: 2em;
+      font-size: 14px;
+
+      &>* {
+        font-size: 14px;
+      }
+
+      &:nth-child(1) {
+        padding: 5px 10px;
+        //font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &:nth-child(2) {
+        padding: 5px 10px;
+        color: $--color-info;
+        //text-indent: 0.5em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+  &.label-position {
+
+    &-top {
+    }
+
+    &-left {
+      & .element-col {
+
+
+        & > .kui-col {
+          &:nth-child(1) {
+            width: 110px;
+          }
+
+          &:nth-child(2) {
+            width: calc(100% - 110px - 0.5em);
+          }
+        }
+      }
+    }
+  }
+
+  & {
+    white-space: nowrap;
+  }
+
+  // medium / small / mini
+  &.medium {
+    & .element-col {
+      font-size: $--font-size-base;
+    }
+
+  }
+
+  &.small {
+
+    & .element-col {
+      font-size: $--font-size-small;
+    }
+  }
+
+  &.mini {
+    & .element-col {
+      font-size: $--font-size-extra-small;
+    }
+  }
+  & .kui-input-number {
+    width: 100%;
+  }
+  & .kui-date {
+    &-editor {
+      &.kui-input {
+        width: 100%;
+
+        &__inner {
+          width: 100%;
+        }
+      }
+
+    }
+  }
+}

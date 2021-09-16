@@ -47,6 +47,11 @@ module.exports = function(source) {
         name: 'component-doc',
         components: {
           ${componenetsString}
+        },
+        data(){
+          return {
+            KARMAN_VAL:{}
+          }
         }
       }
     </script>`;

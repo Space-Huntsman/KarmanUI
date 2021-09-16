@@ -2,16 +2,6 @@
 
 本节将介绍如何在项目中使用 Karman。
 
-### 使用 vue-cli@3
-
-我们为新版的 vue-cli 准备了相应的 [Karman 插件](https://github.com/KarmanUI/vue-cli-plugin-karman)，你可以用它们快速地搭建一个基于 Karman 的项目。
-
-### 使用 Starter Kit
-
-我们提供了通用的[项目模板](https://github.com/KarmanUI/karman-starter)，你可以直接使用。对于 Laravel 用户，我们也准备了相应的[模板](https://github.com/KarmanUI/karman-in-laravkui-starter)，同样可以直接下载使用。
-
-如果不希望使用我们提供的模板，请继续阅读。
-
 ### 引入 Karman
 
 你可以引入整个 Karman，或是根据需要仅引入部分组件。我们先介绍如何引入完整的 Karman。

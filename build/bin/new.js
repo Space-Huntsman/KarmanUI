@@ -16,6 +16,7 @@ const fileSave = require('file-save');
 const uppercamelcase = require('uppercamelcase');
 const componentname = process.argv[2];
 const chineseName = process.argv[3] || componentname;
+const groupName = process.argv[4] || 'Others';
 const ComponentName = uppercamelcase(componentname);
 const PackagePath = path.resolve(__dirname, '../../packages', componentname);
 const Files = [
@@ -38,7 +39,7 @@ export default ${ComponentName};`
 
 <script>
 export default {
-  name: 'KUI${ComponentName}'
+  name: 'Kui${ComponentName}'
 };
 </script>`
   },
@@ -74,10 +75,10 @@ describe('${ComponentName}', () => {
   },
   {
     filename: path.join('../../types', `${componentname}.d.ts`),
-    content: `import { karmanUIComponent } from './component'
+    content: `import { KarmanUIComponent } from './component'
 
 /** ${ComponentName} Component */
-export declare class KUI${ComponentName} extends karmanUIComponent {
+export declare class Kui${ComponentName} extends KarmanUIComponent {
 }`
   }
 ];
@@ -105,10 +106,10 @@ const karmanTsPath = path.join(__dirname, '../../types/karman-ui.d.ts');
 
 let karmanTsText = `${fs.readFileSync(karmanTsPath)}
 /** ${ComponentName} Component */
-export class ${ComponentName} extends KUI${ComponentName} {}`;
+export class ${ComponentName} extends Kui${ComponentName} {}`;
 
 const index = karmanTsText.indexOf('export') - 1;
-const importString = `import { KUI${ComponentName} } from './${componentname}'`;
+const importString = `import { Kui${ComponentName} } from './${componentname}'`;
 
 karmanTsText = karmanTsText.slice(0, index) + importString + '\n' + karmanTsText.slice(index);
 
@@ -127,8 +128,8 @@ Files.forEach(file => {
 const navConfigFile = require('../../examples/nav.config.json');
 
 Object.keys(navConfigFile).forEach(lang => {
-  let groups = navConfigFile[lang][2].groups;
-  groups[groups.length - 1].list.push({
+  let groups = navConfigFile[lang].find((item) => item.hasOwnProperty('groups')).groups;
+  groups.find(item => groupName === item.groupName).list.push({
     path: `/${componentname}`,
     title: lang === 'zh-CN' && componentname !== chineseName
       ? `${ComponentName} ${chineseName}`
