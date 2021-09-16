@@ -279,7 +279,7 @@ export default {
         if (/\./.test(this.value.dateTime)) {
           const timeArray = this.value.dateTime.split('.');
           this.dateTime = new Date(timeArray[0]);
-          this.millisecond = +timeArray[1] ;
+          this.millisecond = +timeArray[1];
         } else {
           this.dateTime = new Date(this.value.dateTime);
           this.millisecond = 0;
@@ -301,7 +301,7 @@ export default {
     calcDateVal() {
       if (this.dateTime) {
         if (this.highPrecision) {
-          this.$set(this.value, 'dateTime', `${formatDate(this.dateTime, this.format)}.${((this.millisecond )).toFixed(0)}`);
+          this.$set(this.value, 'dateTime', `${formatDate(this.dateTime, this.format)}.${((this.millisecond)).toFixed(0)}`);
         } else {
           this.$set(this.value, 'dateTime', `${formatDate(this.dateTime, this.format)}`);
         }
