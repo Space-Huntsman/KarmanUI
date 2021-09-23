@@ -37,7 +37,7 @@
 <ul class="icon-list">
     <li v-for="name in $icon.xClassList.filter(item=>new RegExp(KARMAN_VAL.filter,'ig').test(item))" :key="name">
         <span>
-      <i :class="'kui-icon-' + name"></i>
+      <i style="font-size: 50px" :class="'kui-icon-' + name"></i>
         <span class="icon-name">{{'kui-icon-' + name}}</span>
     </span>
     </li>
@@ -48,7 +48,7 @@
 <ul class="icon-list">
   <li v-for="name in $icon.classList.filter(item=>new RegExp(KARMAN_VAL.filter,'ig').test(item))" :key="name">
     <span>
-      <i :class="'kui-icon-' + name"></i>
+      <i  style="font-size: 50px" :class="'kui-icon-' + name"></i>
       <span class="icon-name">{{'kui-icon-' + name}}</span>
     </span>
   </li>

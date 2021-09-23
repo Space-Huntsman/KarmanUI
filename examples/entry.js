@@ -18,8 +18,9 @@ import './assets/styles/mixin.scss';
 import './assets/styles/fonts/style.css';
 import icon from './icon.json';
 import locale from '/src/locale/lang/zh-CN';
+import axios from 'axios';
 
-Vue.use(Karman, { locale });
+Vue.use(Karman, {locale});
 Vue.use(VueRouter);
 Vue.component('demo-block', demoBlock);
 Vue.component('main-footer', MainFooter);
@@ -28,19 +29,22 @@ Vue.component('side-nav', SideNav);
 Vue.component('footer-nav', FooterNav);
 
 const globalEle = new Vue({
-  data: { $isEle: false } // 是否 ele 用户
+  data: {$isEle: false} // 是否 ele 用户
 });
 
 Vue.mixin({
   computed: {
     $isEle: {
       get: () => (globalEle.$data.$isEle),
-      set: (data) => {globalEle.$data.$isEle = data;}
+      set: (data) => {
+        globalEle.$data.$isEle = data;
+      }
     }
   }
 });
 
 Vue.prototype.$icon = icon; // Icon 列表页用
+Vue.prototype.$axios = axios; // Icon 列表页用
 
 const router = new VueRouter({
   mode: 'hash',

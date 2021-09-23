@@ -52,7 +52,7 @@ module.exports = function(source) {
           return {
             KARMAN_VAL:{}
           }
-        }
+        },
       }
     </script>`;
   } else if (content.indexOf('<script>') === 0) { // 硬编码，有待改善

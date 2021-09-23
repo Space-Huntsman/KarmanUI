@@ -88,5 +88,6 @@
   "descriptions-item": "./packages/descriptions-item/index.js",
   "result": "./packages/result/index.js",
   "orbit-elements": "./packages/orbit-elements/index.js",
-  "satellite-point": "./packages/satellite-point/index.js"
+  "satellite-point": "./packages/satellite-point/index.js",
+  "track-data-chart": "./packages/track-data-chart/index.js"
 }
