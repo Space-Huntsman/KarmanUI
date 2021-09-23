@@ -93,6 +93,7 @@ import {KuiResult} from './result'
 import { KuiOrbitElements } from './orbit-elements'
 
 import { KuiSatellitePoint } from './satellite-point'
+import { KuiTrackDataChart } from './track-data-chart'
 
 export interface InstallationOptions {
   locale: any,
@@ -390,3 +391,6 @@ export class OrbitElements extends KuiOrbitElements {}
 
 /** SatellitePoint Component */
 export class SatellitePoint extends KuiSatellitePoint {}
+
+/** TrackDataChart Component */
+export class TrackDataChart extends KuiTrackDataChart {}

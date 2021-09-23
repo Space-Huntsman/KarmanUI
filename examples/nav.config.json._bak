@@ -73,6 +73,10 @@
               "title": "OrbitElements 轨道根数"
             },
             {
+              "path": "/satellite-point",
+              "title": "SatellitePoint 星下点"
+            },
+            {
               "path": "/track-data-chart",
               "title": "TrackDataChart 外测数据图表"
             }
