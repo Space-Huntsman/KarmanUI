@@ -2,10 +2,10 @@ var fs = require('fs');
 var path = require('path');
 var Components = require('../../components.json');
 var themes = [
-  'theme-default'
+  'default'
 ];
 Components = Object.keys(Components);
-var basepath = path.resolve(__dirname, '../../packages/');
+var basepath = path.resolve(__dirname, '../../theme/');
 
 function fileExists(filePath) {
   try {
