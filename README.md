@@ -13,7 +13,8 @@ npm install karman-ui -S
 ``` javascript
 import Vue from 'vue'
 import Karman from 'karman-ui'
-import 'karman-ui/theme/default/index.scss';
+//import default css  
+import 'karman-ui/theme/default/';
 
 Vue.use(Karman)
 
