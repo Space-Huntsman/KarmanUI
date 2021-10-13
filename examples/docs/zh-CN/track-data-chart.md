@@ -64,7 +64,7 @@
                 startTime: new Date(),
                 elevationStepData: [],
                 timer: null,
-                mockJsonUrl: "https://raw.githubusercontent.com/Space-Huntsman/KarmanUI/develop/examples/assets/mock/trackingData.json",
+                mockJsonUrl: "https://yudanxxx.oss-cn-zhangjiakou.aliyuncs.com/trackingData.json",
                 partOptions: {
                     part: true,
                     part_range: {

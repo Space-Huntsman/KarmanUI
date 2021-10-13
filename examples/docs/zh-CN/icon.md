@@ -1,6 +1,6 @@
 ## Icon 图标
 
-提供了两套图标，X系列图标目前是针对航天领域的专业图标集合，还包含一套常用的图标集合。
+给提供开发者更多的选择，我们提供了多套图标集合，分别为X系列图标（针对航天领域）、A系列（精选图标合集）、常规图标集合。
 
 ### 使用方法
 
@@ -37,7 +37,18 @@
 <ul class="icon-list">
     <li v-for="name in $icon.xClassList.filter(item=>new RegExp(KARMAN_VAL.filter,'ig').test(item))" :key="name">
         <span>
-      <i style="font-size: 50px" :class="'kui-icon-' + name"></i>
+      <i style="font-size: 30px" :class="'kui-icon-' + name"></i>
+        <span class="icon-name">{{'kui-icon-' + name}}</span>
+    </span>
+    </li>
+</ul>
+
+### A 系列图标集合 （精选图标合集)
+
+<ul class="icon-list">
+    <li v-for="name in $icon.aClassList.filter(item=>new RegExp(KARMAN_VAL.filter,'ig').test(item))" :key="name">
+        <span>
+      <i style="font-size: 30px" :class="'kui-icon-' + name"></i>
         <span class="icon-name">{{'kui-icon-' + name}}</span>
     </span>
     </li>
@@ -48,7 +59,7 @@
 <ul class="icon-list">
   <li v-for="name in $icon.classList.filter(item=>new RegExp(KARMAN_VAL.filter,'ig').test(item))" :key="name">
     <span>
-      <i  style="font-size: 50px" :class="'kui-icon-' + name"></i>
+      <i  style="font-size: 30px" :class="'kui-icon-' + name"></i>
       <span class="icon-name">{{'kui-icon-' + name}}</span>
     </span>
   </li>
