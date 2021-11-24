@@ -330,7 +330,7 @@ describe('Menu', () => {
     var submenu = vm.$refs.submenu;
     triggerEvent(submenu.$el, 'mouseenter');
     setTimeout(_ => {
-      expect(document.body.querySelector('.kui-menu--popup').parentKarman.style.display).to.not.ok;
+      expect(document.body.querySelector('.kui-menu--popup').parentElement.style.display).to.not.ok;
       done();
     }, 500);
   });
@@ -361,10 +361,10 @@ describe('Menu', () => {
     triggerElm.click();
 
     setTimeout(_ => {
-      expect(document.body.querySelector('.kui-menu--popup').parentKarman.style.display).to.not.ok;
+      expect(document.body.querySelector('.kui-menu--popup').parentElement.style.display).to.not.ok;
       triggerElm.click();
       setTimeout(_ => {
-        expect(document.body.querySelector('.kui-menu--popup').parentKarman.style.display).to.be.equal('none');
+        expect(document.body.querySelector('.kui-menu--popup').parentElement.style.display).to.be.equal('none');
         done();
       }, 1000);
     }, 500);

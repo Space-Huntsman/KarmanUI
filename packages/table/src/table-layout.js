@@ -125,7 +125,7 @@ class TableLayout {
       if (getComputedStyle(headerChild).display === 'none') {
         return true;
       }
-      headerChild = headerChild.parentKarman;
+      headerChild = headerChild.parentElement;
     }
     return false;
   }
