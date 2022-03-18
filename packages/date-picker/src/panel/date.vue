@@ -52,14 +52,14 @@
             <button
               type="button"
               @click="prevYear"
-              :aria-label="t(`el.datepicker.prevYear`)"
+              :aria-label="t(`lang.datepicker.prevYear`)"
               class="kui-picker-panel__icon-btn kui-date-picker__prev-btn kui-icon-d-arrow-left">
             </button>
             <button
               type="button"
               @click="prevMonth"
               v-show="currentView === 'date'"
-              :aria-label="t(`el.datepicker.prevMonth`)"
+              :aria-label="t(`lang.datepicker.prevMonth`)"
               class="kui-picker-panel__icon-btn kui-date-picker__prev-btn kui-icon-arrow-left">
             </button>
             <span
@@ -71,18 +71,18 @@
               v-show="currentView === 'date'"
               role="button"
               class="kui-date-picker__header-label"
-              :class="{ active: currentView === 'month' }">{{t(`el.datepicker.month${ month + 1 }`)}}</span>
+              :class="{ active: currentView === 'month' }">{{t(`lang.datepicker.month${ month + 1 }`)}}</span>
             <button
               type="button"
               @click="nextYear"
-              :aria-label="t(`el.datepicker.nextYear`)"
+              :aria-label="t(`lang.datepicker.nextYear`)"
               class="kui-picker-panel__icon-btn kui-date-picker__next-btn kui-icon-d-arrow-right">
             </button>
             <button
               type="button"
               @click="nextMonth"
               v-show="currentView === 'date'"
-              :aria-label="t(`el.datepicker.nextMonth`)"
+              :aria-label="t(`lang.datepicker.nextMonth`)"
               class="kui-picker-panel__icon-btn kui-date-picker__next-btn kui-icon-arrow-right">
             </button>
           </div>
